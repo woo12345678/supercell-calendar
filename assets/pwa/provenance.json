@@ -1,0 +1,10 @@
+{
+  "source": "assets/pwa/calendar-icon.svg",
+  "sourceSha256": "c9cf7730d11e3207a39651137fedf6fcdfc56844f7b63942e049073e5dedb5a4",
+  "method": "Deterministic Pillow redraw of the source SVG geometry and colors; PNG compression level 9.",
+  "outputs": {
+    "calendar-icon-192.png": "63c321370978c392a6d86489625d180b2aabc0c95cb4bea41e3759bd3071a423",
+    "calendar-icon-512.png": "add2577de70ff1fd24cd17ce4a32f74abfca1aa4411844cb49a4ea5bc18fc1b0",
+    "apple-touch-icon-180.png": "b28dec9ea3111ee8786413c57b4957b5c4c31b962a1479edd407faccb702056e"
+  }
+}

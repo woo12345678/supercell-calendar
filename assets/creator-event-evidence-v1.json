@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "reviewedCutoff": "2026-08-28",
+  "inventories": [
+    { "gameId": "clash-of-clans", "events": [] },
+    {
+      "gameId": "brawl-stars",
+      "events": [
+        {
+          "id": "official-brawl-korea-school-esports-application-deadline-2026",
+          "title": "찾아가는 교내 이스포츠 대회 참가 학교 신청 기한",
+          "canonicalEventKey": "brawl-stars/school-esports-application-deadline/2026",
+          "startDate": "2026-08-28",
+          "endDate": "2026-08-28",
+          "official": false,
+          "status": "CREATOR_DATED",
+          "confidence": "HIGH",
+          "authority": "OFFICIAL",
+          "evidenceKind": "DESCRIPTION",
+          "captionType": "DESCRIPTION_TEXT",
+          "evidenceQuote": "📆 신청 기한 : 2026.08.28.(금)까지",
+          "evidenceHash": "5eaa62758d0e0c687b8b247c592cc77102e84e6d967bd260b9f136f482ee47ce",
+          "dateExpression": "2026.08.28.",
+          "datePrecision": "END_ONLY",
+          "deadlineSemantics": "ON_OR_BEFORE_DATE",
+          "eventScope": "COMMUNITY_ESPORTS_APPLICATION",
+          "corroborationState": "NO_OFFICIAL_ARTICLE_COMPARISON",
+          "gameId": "brawl-stars",
+          "videoId": "rnNrqOIwzOU",
+          "channelId": "UClJspSpzADMROqOW9HLHaoA",
+          "creatorName": "Brawl Stars Korea",
+          "sourceUrl": "https://www.youtube.com/watch?v=rnNrqOIwzOU",
+          "publishedAt": "2026-08-15T11:00:34Z",
+          "reviewedAt": "2026-08-27T16:10:00Z",
+          "quoteTimestamp": null,
+          "timezone": null,
+          "sourceState": "BUNDLED_REVIEWED"
+        }
+      ]
+    },
+    { "gameId": "boom-beach", "events": [] },
+    { "gameId": "clash-royale", "events": [] },
+    { "gameId": "hay-day", "events": [] }
+  ]
+}

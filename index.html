@@ -1,0 +1,168 @@
+<!doctype html>
+<!-- Compatibility marker: v2.1.3 Today contracts remain preserved in v2.1.6. -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#23333a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/pwa/apple-touch-icon-180.png">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://i.ytimg.com/vi/ https://clashofclans-layouts.com; manifest-src 'self'; worker-src 'self'; connect-src 'self'; font-src 'none'; object-src 'none'; frame-src 'none'; media-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>슈퍼셀 달력 v2.1.23</title>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="priority-agenda.css">
+  <link rel="stylesheet" href="daily-brief.css">
+  <link rel="stylesheet" href="daily-dashboard.css">
+  <link rel="stylesheet" href="supercell-games.css">
+  <link rel="stylesheet" href="entity-images.css">
+  <link rel="stylesheet" href="readability.css">
+  <link rel="stylesheet" href="revenue.css"><link rel="stylesheet" href="spend.css">
+  <link rel="stylesheet" href="instant-training.css">
+  <link rel="stylesheet" href="user-calendar.css">
+  <link rel="stylesheet" href="emergency.css">
+</head>
+<body>
+  <p id="pwaStatus" class="pwa-status" role="status" aria-live="polite" hidden></p>
+  <a class="skip" href="#calendar">달력으로 건너뛰기</a>
+  <header class="clan-banner">
+    <div class="brand-copy"><p>한눈에 보는 게임 일정 · v2.1.23</p><h1>슈퍼셀 달력</h1></div>
+    <div class="header-actions">
+      <button id="refresh" class="text-button" aria-label="클래시 오브 클랜 공식 소식과 크리에이터 영상 새로고침">CoC 새 소식</button>
+      <button id="alerts" class="alert-button" aria-pressed="false" aria-label="공식 소식 알림 켜기"><span>공식 소식 알림 끔</span></button>
+    </div>
+  </header>
+
+  <nav id="gameTabs" class="game-tabs" role="tablist" aria-label="게임 선택"><button id="gameTab-clash-of-clans" role="tab" aria-selected="true" data-game="clash-of-clans" aria-controls="gameWorkspace" aria-label="클래시 오브 클랜">클오클</button><button id="gameTab-brawl-stars" role="tab" aria-selected="false" tabindex="-1" data-game="brawl-stars" aria-controls="gameWorkspace">브롤스타즈</button><button id="gameTab-boom-beach" role="tab" aria-selected="false" tabindex="-1" data-game="boom-beach" aria-controls="gameWorkspace">붐비치</button><button id="gameTab-clash-royale" role="tab" aria-selected="false" tabindex="-1" data-game="clash-royale" aria-controls="gameWorkspace">클래시 로얄</button><button id="gameTab-hay-day" role="tab" aria-selected="false" tabindex="-1" data-game="hay-day" aria-controls="gameWorkspace">헤이데이</button></nav>
+  <div id="gameWorkspace" role="tabpanel" aria-labelledby="gameTab-clash-of-clans">
+  <nav class="main-tabs" role="tablist" aria-label="주요 화면"><button id="calendarTab" role="tab" aria-selected="true" aria-controls="calendarPanel">달력</button><button id="emergencyTab" role="tab" aria-selected="false" aria-controls="emergencyPanel" tabindex="-1">긴급 <span id="emergencyCount" class="emergency-count" aria-label="현재 긴급 건수" hidden></span></button><button id="strategyTab" role="tab" aria-selected="false" aria-controls="strategyPanel" tabindex="-1">게임 팁</button><button id="creatorsTab" role="tab" aria-selected="false" aria-controls="creatorsPanel" tabindex="-1">영상</button><button id="todayTab" role="tab" aria-selected="false" aria-controls="todayPanel" tabindex="-1">오늘</button><button id="spendTab" role="tab" aria-selected="false" aria-controls="spendPanel" tabindex="-1">현질 기록</button><button id="revenueTab" role="tab" aria-selected="false" aria-controls="revenuePanel" tabindex="-1">매출</button></nav>
+  <main id="calendarPanel" role="tabpanel" aria-labelledby="calendarTab">
+    <section id="gameThemeStrip" class="game-theme-strip" aria-labelledby="gameThemeName"><img id="gameHeroArt" class="game-hero-art" src="assets/game-themes/clash-of-clans.webp" alt="" aria-hidden="true"><div class="game-theme-copy"><p class="kicker">이번 달 전장</p><h2 id="gameThemeName">클래시 오브 클랜</h2><p id="gameThemeAction">마을의 다음 작전을 달력에서 먼저 확인하세요.</p></div><button id="launchSelectedGame" class="selected-game-launch" disabled title="브라우저 미리보기에서는 게임을 열 수 없습니다." aria-label="브라우저 미리보기에서는 게임을 열 수 없습니다.">클래시 오브 클랜 열기</button></section>
+    <section class="command-strip" aria-labelledby="monthTitle">
+      <div class="month-controls">
+        <button id="prev" class="square-button" aria-label="이전 달"><span aria-hidden="true">‹</span></button>
+        <div><p id="monthKicker" class="kicker">이번 달 · 클래시 오브 클랜 작전판</p><h2 id="monthTitle"></h2></div>
+        <button id="next" class="square-button" aria-label="다음 달"><span aria-hidden="true">›</span></button>
+      </div>
+      <button id="today" class="today-button">오늘로</button>
+      <div class="source-key" aria-label="자료 구분"><span><i class="key-official official-badge"></i>공식</span><span><i class="key-high-confidence high-confidence-badge"></i>고신뢰</span><span><i class="key-expected expected-badge"></i>예상</span><span><i class="key-creator creator-badge"></i>크리에이터 날짜 언급</span><span><i class="key-unconfirmed unconfirmed-badge"></i>미확정</span></div>
+    </section>
+
+    <nav id="calendarFilters" class="filters" role="toolbar" aria-label="일정 카테고리 필터"></nav>
+
+    <section id="priorityAgenda" class="priority-agenda" aria-labelledby="priorityAgendaTitle" aria-live="polite">
+      <div class="priority-agenda-head"><div><p class="kicker">우선 일정</p><h2 id="priorityAgendaTitle">지금 진행 중 · 곧 시작</h2></div><div class="source-controls" role="group" aria-label="일정 출처 필터"><button id="agendaAll" aria-pressed="true">모든 출처</button><button id="agendaOfficial" aria-pressed="false">공식</button><button id="agendaCreator" aria-pressed="false">크리에이터</button></div></div>
+      <div class="priority-columns"><section aria-labelledby="activeAgendaTitle"><h3 id="activeAgendaTitle">지금 진행 중</h3><div id="activeAgenda" class="priority-list"></div></section><section aria-labelledby="upcomingAgendaTitle"><h3 id="upcomingAgendaTitle">곧 시작</h3><div id="upcomingAgenda" class="priority-list"></div></section></div>
+    </section>
+
+    <section id="instantTrainingTracker" class="instant-training" aria-labelledby="instantTrainingTitle" hidden>
+      <div class="instant-training-head"><div><p class="kicker">사용자 개인 기록</p><h2 id="instantTrainingTitle">붐비치 30일 즉시 훈련</h2></div><p id="instantTrainingWarning" class="instant-training-warning" role="alert"></p></div>
+      <p class="instant-training-caveat">사용자 입력을 기준으로 하며 게임 서버와 동기화되지 않습니다.</p>
+      <p class="instant-training-notice">D-3·D-1 경고는 이 화면을 열 때만 표시되며 공식 소식 알림 설정과 별개입니다. 만료 알림을 자동으로 보내지 않습니다.</p>
+      <div id="instantTrainingSummary" class="instant-training-summary" hidden><p id="instantTrainingStatus" role="status" aria-live="polite"></p><p id="instantTrainingDates"></p><progress id="instantTrainingProgress" max="1" value="0" aria-label="즉시 훈련 사용 진행률"></progress></div>
+      <form id="instantTrainingForm" class="instant-training-form">
+        <label>구매·시작 시각 <input id="instantTrainingStart" type="datetime-local"></label>
+        <label>정확한 만료 시각 <input id="instantTrainingExpiry" type="datetime-local"></label>
+        <div class="instant-training-actions"><button type="button" id="instantTrainingNow">지금부터 30일</button><button type="submit">저장</button><button type="button" id="instantTrainingEdit">수정</button><button type="button" id="instantTrainingReset">입력 되돌리기</button><button type="button" id="instantTrainingDelete" aria-label="즉시 훈련 기록 삭제">삭제</button></div>
+      </form>
+      <p id="instantTrainingFeedback" class="status" role="status" aria-live="polite"></p>
+      <p id="instantTrainingError" class="status error" role="alert" hidden></p>
+    </section>
+
+    <details id="userCalendar" class="user-calendar">
+      <summary>내 일정 추가</summary>
+      <p class="user-calendar-disclosure">사용자 입력 · 이 기기/브라우저에만 저장 · Supercell과 동기화되지 않음</p>
+      <form id="userEventForm" class="user-event-form">
+        <label>제목 <input id="userEventTitle" maxlength="60" required></label>
+        <label>시작일 <input id="userEventStart" type="date" required></label>
+        <label>종료일 <input id="userEventEnd" type="date" required></label>
+        <label class="wide">메모 <textarea id="userEventNote" maxlength="160"></textarea></label>
+        <div class="user-event-actions"><button type="submit">저장</button><button id="userEventCancel" type="button" hidden>편집 취소</button></div>
+      </form>
+      <p id="userCalendarFeedback" role="status" aria-live="polite" tabindex="-1"></p>
+      <div id="userCalendarList" class="user-calendar-list" aria-label="선택한 게임의 사용자 일정"></div>
+    </details>
+
+    <section class="calendar-sheet" aria-labelledby="calendarHeading">
+      <div class="sheet-heading"><p class="folio">한 달 일정</p><h2 id="calendarHeading" class="visually-hidden">월간 일정</h2></div>
+      <div class="weekdays" aria-hidden="true"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+      <div id="calendar" class="calendar" role="grid" aria-label="월간 일정"></div>
+      <p class="calendar-note"><strong>출처 안내.</strong> 공식, 고신뢰, 예상, 크리에이터 날짜 언급, 미확정 상태를 구분합니다. 정확한 시작 시각과 변경 사항은 게임 내 공지를 우선해 주세요.</p>
+      <aside class="variable-event-note" aria-labelledby="variableEventTitle"><strong id="variableEventTitle">게임 내 변동 이벤트</strong><p><b>영웅 스포트라이트</b>처럼 Supercell 웹 글에 정확한 날짜가 공개되지 않은 일정은 게임 내 Events 탭에서 확인해야 합니다. 날짜가 명시된 공식 글이 게시되면 자동으로 달력에 추가됩니다.</p></aside>
+    </section>
+
+    <div class="event-legend" aria-label="일정 유형 범례"><span class="event-season">◆ 시즌</span><span class="event-league">▰ 리그</span><span class="event-clan-games">★ 게임</span><span class="event-raid">◇ 레이드</span><span class="event-special-event">✦ 특별 이벤트</span><span class="event-medal-event">⬟ 메달 이벤트</span><span class="event-spotlight">◉ 스포트라이트</span></div>
+
+    <details id="dailyBrief" class="daily-brief"><summary id="dailyBriefSummary"><span id="dailyBriefTitle">오늘의 게임 한눈에 보기</span><span id="briefSummaryText">오늘 공식 일정을 확인하는 중…</span></summary><div class="brief-grid"><section><h3>오늘</h3><div id="briefToday"></div></section><section><h3>이번 달 다음 일정</h3><div id="briefNext"></div></section><section><h3>게임에서 확인</h3><div id="briefInGame"></div></section><section><h3>플레이 메모</h3><div id="briefNotes"></div></section></div></details>
+    <section class="official-links" aria-label="공식 링크"><div><strong id="visibleGameName">클래시 오브 클랜 공식</strong><p id="officialSourceCopy">공식 소식은 Supercell 출처만 표시합니다. 로그인·결제 정보는 저장하지 않습니다.</p></div><div><button id="officialSourceButton">게임 공식 페이지</button><button id="storeButton">공식 Supercell Store</button></div></section>
+    <section id="inGameProgramsPanel" class="notice-panel in-game-programs" aria-labelledby="inGameProgramsTitle" hidden><div class="section-heading"><div><p class="kicker">날짜 미공개 · 게임에서 확인</p><h2 id="inGameProgramsTitle">게임에서 확인할 활동</h2></div></div><p>공식 출처에서 존재를 확인한 항목과 출처를 확보하지 못한 플레이 체크를 카드별로 구분합니다. 날짜와 진행 여부는 게임 안에서 확인하세요.</p><div id="inGamePrograms" class="program-grid"></div></section>
+    <section id="undatedPatterns" class="notice-panel undated-patterns" aria-labelledby="expectedPatternsTitle" hidden><div class="section-heading"><div><p class="kicker">날짜를 정하지 않은 참고</p><h2 id="expectedPatternsTitle">예상 반복 패턴</h2></div></div><p>정확한 날짜로 배치하지 않은 참고 패턴입니다. 게임 안의 일정을 우선해 주세요.</p><div id="expectedPatterns" class="pattern-grid"></div></section>
+
+    <section class="dispatch-grid">
+      <section class="notice-panel next-panel" aria-labelledby="upcomingTitle">
+        <div class="section-heading"><div><p class="kicker">다가오는 일정</p><h2 id="upcomingTitle">선택한 달 주요 일정</h2></div></div>
+        <div id="upcoming" class="dispatch-list"></div>
+      </section>
+      <section class="notice-panel official-panel" aria-labelledby="officialTitle">
+        <div class="section-heading"><div><p class="kicker">공식 채널에서 확인</p><h2 id="officialTitle">공식 소식</h2></div></div>
+        <p id="networkStatus" class="status" role="status">Supercell 공식 블로그를 확인하는 중…</p>
+        <div id="news" class="dispatch-list"></div>
+      </section>
+    </section>
+
+    <aside class="disclaimer"><strong>출처 표기 원칙</strong><p id="disclaimerText"><b>공식 소식</b>과 <b>공식 일정</b>은 출처와 확인일이 있는 항목만 표시합니다. CoC의 <b>빠다 영상 · 비공식</b> 자료는 공식 일정과 분리합니다. <b>예상 일정</b>은 반복 패턴이며 바뀔 수 있습니다. 날짜가 확인되지 않으면 게임 내에서 확인하세요. 진행 기록은 로컬에만 저장되고 <b>게임과 자동 동기화되지 않습니다</b>. 이 앱은 Supercell 또는 소개된 채널의 공식 앱이나 보증 제품이 아닙니다.</p></aside>
+  </main>
+
+  <main id="emergencyPanel" class="emergency-panel" role="tabpanel" aria-labelledby="emergencyTab" hidden><header class="emergency-heading"><p class="kicker">REVIEWED INCIDENT WORKSPACE</p><h2 id="emergencyTitle">긴급</h2><p id="emergencySummary"></p><p id="emergencyReviewedAt" class="status"></p></header><section class="emergency-section" aria-labelledby="emergencyActiveTitle"><h2 id="emergencyActiveTitle">현재 확인</h2><div id="emergencyActiveList" class="emergency-list"></div></section><section class="emergency-section" aria-labelledby="emergencyMonitoringTitle"><h2 id="emergencyMonitoringTitle">모니터링 · 재확인 필요</h2><div id="emergencyMonitoringList" class="emergency-list"></div></section><details class="emergency-resolved"><summary>해결됨</summary><div id="emergencyResolvedList" class="emergency-list"></div></details></main>
+  <main id="creatorsPanel" class="creator-board" role="tabpanel" aria-labelledby="creatorsTab creatorTitle" hidden>
+      <div class="board-heading">
+        <div><p class="kicker">SUPERCELL NOTICEBOARD · CREATOR</p><h2 id="creatorTitle">슈퍼셀 게시판 <span>크리에이터 영상</span></h2><p>달력 일정이나 공식 공지가 아닌, 팬이 함께 보는 참고 영상입니다.</p></div>
+      </div>
+      <div class="creator-tabs" role="tablist" aria-label="크리에이터 선택">
+        <button id="baddaTab" role="tab" aria-selected="true" aria-controls="baddaPanel">빠다</button>
+        <button id="judoTab" role="tab" aria-selected="false" aria-controls="judoPanel" tabindex="-1">Judo Sloth</button>
+      </div>
+      <section id="baddaPanel" role="tabpanel" aria-labelledby="baddaTab" class="creator-panel">
+        <div id="legacyCreatorHeading" class="creator-panel-heading"><p><strong>빠다</strong> · 공개 YouTube RSS</p><button id="creatorChannel" class="channel-button">빠다 채널 보기</button></div>
+        <p id="creatorStatus" class="status creator-status" role="status">빠다 공개 RSS를 확인하는 중…</p><p id="creatorDateStatus" class="status creator-status" role="status">검토 완료 · 일정 재고 없음(실패 시 닫힘)</p>
+        <div id="creatorVideos" class="video-grid"></div>
+      </section>
+      <section id="judoPanel" role="tabpanel" aria-labelledby="judoTab" class="creator-panel" hidden>
+        <div class="creator-panel-heading"><p><strong>Judo Sloth Gaming</strong> <span>@JudoSloth</span></p><button id="judoChannel" class="channel-button">Judo Sloth 채널 보기</button></div>
+        <p class="summary-method">영상 설명 기반 자동 요약</p>
+        <p class="summary-caveat">영문 설명 핵심을 기기에서 자동 번역합니다. 표현이 다를 수 있어요.</p>
+        <p id="judoStatus" class="status creator-status" role="status">Judo Sloth 공개 RSS를 확인하는 중…</p>
+        <div id="judoVideos" class="video-grid judo-grid"></div>
+      </section>
+  </main>
+  <main id="strategyPanel" role="tabpanel" aria-labelledby="strategyTab" hidden><section class="strategy-head"><p class="kicker">직접 살펴본 플레이 팁</p><h2 id="guideTitle">클래시 오브 클랜 배치·조합 노트</h2><p id="guideCopy">2026-08-10 확인 자료만 표시합니다. 복사한 배치는 중단될 수 있어 게임에서 확인해야 하며, 공격 적합성은 레벨·장비에 따라 달라집니다.</p><div id="legacyStrategyControls"><label for="thSelect">마을회관 선택</label><select id="thSelect" aria-label="마을회관 선택"></select></div></section><section aria-labelledby="armyTitle"><h2 id="armyTitle">추천 완파 조합</h2><div id="armyCards" class="strategy-grid"></div></section><section id="metaSection" aria-labelledby="metaStatus"><p id="metaStatus" class="status" role="status">검증된 정적 자료 · 앱 내장 자료</p><div id="metaDashboard" class="meta-dashboard"></div></section><section id="legacyLayoutSection" aria-labelledby="layoutTitle"><h2 id="layoutTitle">커뮤니티 배치</h2><div id="layoutCards" class="strategy-grid layout-grid"></div></section></main>
+  <main id="todayPanel" class="daily-dashboard" role="tabpanel" aria-labelledby="todayTab" hidden><div id="operationsPanel">
+    <header class="operations-head"><p class="kicker">기기에만 남기는 오늘 기록</p><h2>오늘</h2><p>루틴과 타이머는 직접 기록하며 게임과 자동 동기화되지 않습니다.</p><p id="operationsStorageNote" class="status" role="status">이 기기에만 저장됩니다. 브라우저 미리보기에서는 저장되지 않습니다.</p></header>
+    <div class="operations-overview">
+      <section class="operations-card" aria-labelledby="todayOperationsTitle"><h2 id="todayOperationsTitle">오늘의 일정 · 확정/고신뢰/예상 구분</h2><div id="todayOperations" class="dispatch-list"></div></section>
+      <details id="dailySevenDaysDetails" class="operations-card daily-secondary" open><summary id="dailySevenDaysTitle">다음 7일 일정 · 상태별 표시</summary><div id="dailySevenDays" class="dispatch-list" aria-labelledby="dailySevenDaysTitle"></div></details>
+      <section class="operations-card" aria-labelledby="deadlineOperationsTitle"><h2 id="deadlineOperationsTitle">가까운 일정 마감 · 상태별 표시</h2><div id="dailyDeadlines" class="dispatch-list"></div></section>
+      <section class="operations-card" aria-labelledby="dailyTimersTitle"><h2 id="dailyTimersTitle">활성 타이머</h2><div id="dailyActiveTimers" class="timer-list"></div></section>
+    </div>
+    <section id="dailyProgress" class="daily-progress operations-card" aria-labelledby="dailyProgressTitle"><h2 id="dailyProgressTitle">오늘 진행</h2><p id="dailyProgressText" role="status"></p></section>
+    <section class="operations-card" aria-labelledby="dailyPrimaryTitle"><h2 id="dailyPrimaryTitle">남은 루틴</h2><div id="dailyPrimaryActions" class="daily-primary-actions"></div><div id="routineUndo" class="routine-undo" role="status" aria-live="polite"></div><details id="quickRoutineDetails" class="quick-routine-details"><summary>+ 루틴 추가</summary><form id="quickRoutineForm" class="routine-form"><label>이름 <input id="quickRoutineLabel" maxlength="40" required aria-label="새 루틴 이름"></label><label>목표 <input id="quickRoutineTarget" type="number" min="1" max="10000" value="1" required aria-label="새 루틴 목표"></label><button type="submit">추가</button></form></details><details id="completedRoutineDetails" class="completed-routine-details"><summary>완료한 루틴</summary><div id="completedRoutineList" class="completed-routine-list"></div></details></section>
+    <details id="dailyManageDetails" class="operations-card daily-manage"><summary>루틴과 타이머 관리</summary>
+      <section class="operations-routines" aria-labelledby="routineTitle"><div class="operations-title"><div><p class="kicker">만들기·편집·완료 기록</p><h2 id="routineTitle">루틴 관리</h2></div><span>최대 6개</span></div><form id="routineForm" class="routine-form"><label>루틴 이름 <input id="routineLabel" maxlength="40" required aria-label="새 루틴 이름"></label><label>목표 <input id="routineTarget" type="number" min="1" max="10000" value="1" required aria-label="새 루틴 목표"></label><button type="submit">루틴 추가</button></form><div id="routineOperations" class="routine-grid"></div></section>
+      <section class="operations-timers" aria-labelledby="timerTitle"><div class="operations-title"><div><p class="kicker">직접 설정</p><h2 id="timerTitle">타이머 관리</h2></div><label class="toggle-label"><input id="timerAlerts" type="checkbox"> 타이머 완료 무렵 알림</label></div><p class="timer-caveat">Android 절전 정책에 따라 알림이 늦어질 수 있으며 정확한 시각을 보장하지 않습니다. 게임 동기화 알림이 아닙니다.</p><form id="timerForm"><label>이름 <input id="timerLabel" maxlength="40" required aria-label="타이머 이름"></label><label>종류 <select id="timerType" aria-label="타이머 종류"><option value="builder">건설</option><option value="lab">연구소</option><option value="hero">영웅</option><option value="pet">펫</option><option value="equipment">장비</option><option value="custom">기타</option></select></label><label>완료 시각 <input id="timerEnd" type="datetime-local" required aria-label="타이머 완료 시각"></label><button type="submit">타이머 추가</button></form><div id="timerOperations" class="timer-list"></div></section>
+      <section aria-labelledby="favoriteOperationsTitle"><h2 id="favoriteOperationsTitle">즐겨찾기</h2><div id="favoriteOperations" class="dispatch-list"></div></section>
+    </details></div>
+  </main>
+  <main id="spendPanel" class="spend-panel" role="tabpanel" aria-labelledby="spendTab" hidden>
+    <header class="spend-heading"><div><p class="kicker">OFFLINE PERSONAL LEDGER</p><h2>현질 기록</h2><p id="spendCheckedAt" class="spend-checked-at">가격 확인일 2026-08-17</p></div></header>
+    <p class="spend-disclosure"><strong>실제 영수증 금액이 우선입니다.</strong> 표시 가격은 2026-08-17 한국 iOS 공개 목록 참고가입니다.</p><details class="spend-method"><summary>가격 기준·주의사항</summary><p>대표 항목 snapshot이며 전체를 망라하지 않습니다. 여러 가격이 보이는 항목은 고유한 현재 가격이라는 주장이 아닙니다. Android/Supercell Store/프로모션 가격은 다를 수 있습니다. 공식 Store는 상품 종류와 혜택 존재만 확인하며 로그인하지 않은 정확한 가격은 표시하지 않습니다. 기록 버튼은 구매를 실행하지 않습니다. 앱을 삭제하거나 앱 데이터를 삭제하면 기록도 사라집니다.</p></details><p id="spendStatus" class="status spend-storage" role="status">브라우저 미리보기 · 저장되지 않음</p>
+    <section class="spend-summary" aria-label="구매 기록 요약"><article><span>전체 합계</span><strong id="spendGlobalTotal">0원</strong></article><article><span id="spendGameTotalLabel">클래시 오브 클랜 합계</span><strong id="spendGameTotal">0원</strong></article><article><span>전체 기록</span><strong id="spendEntryCount">0건</strong></article></section>
+    <section class="spend-section" aria-labelledby="spendCatalogTitle"><h3 id="spendCatalogTitle">빠른 기록</h3><div id="spendCatalog" class="spend-catalog"></div><div id="spendSources" class="spend-source-actions" role="group" aria-label="선택한 게임의 가격 및 상품 종류 출처"><button type="button" data-game="clash-of-clans" data-url="https://apps.apple.com/kr/app/clash-of-clans/id529479190">CoC iOS 가격 출처</button><button type="button" data-game="brawl-stars" data-url="https://apps.apple.com/kr/app/brawl-stars/id1229016807">Brawl iOS 가격 출처</button><button type="button" data-game="boom-beach" data-url="https://apps.apple.com/kr/app/boom-beach/id672150402">Boom iOS 가격 출처</button><button type="button" data-game="clash-of-clans" data-url="https://store.supercell.com/ko/clashofclans">CoC 공식 종류 출처</button><button type="button" data-game="brawl-stars" data-url="https://store.supercell.com/ko/brawlstars">Brawl 공식 종류 출처</button><button type="button" data-game="boom-beach" data-url="https://store.supercell.com/ko/boombeach">Boom 공식 종류 출처</button></div></section>
+    <section class="spend-section" aria-labelledby="spendCustomTitle"><h3 id="spendCustomTitle">직접 기록</h3><form id="spendForm" class="spend-form"><label>게임<select id="spendGame" required><option value="clash-of-clans">클래시 오브 클랜</option><option value="brawl-stars">브롤스타즈</option><option value="boom-beach">붐비치</option><option value="clash-royale">클래시 로얄</option><option value="hay-day">헤이데이</option></select></label><label>이름<input id="spendName" maxlength="60" required></label><label>분류<select id="spendCategory" required><option value="pass">패스</option><option value="currency">재화</option><option value="cosmetic">꾸미기</option><option value="service">서비스</option><option value="offer">특가</option><option value="custom">기타</option></select></label><label>금액 (원)<input id="spendAmount" type="number" min="1" max="100000000" step="1" inputmode="numeric" required></label><label>구매일<input id="spendDate" type="date" required></label><label class="wide">메모 (선택)<input id="spendNote" maxlength="80"></label><button type="submit">구매 기록 추가</button></form></section>
+    <section class="spend-section" aria-labelledby="spendHistoryTitle"><h3 id="spendHistoryTitle">최근 기록</h3><div id="spendUndo" class="spend-undo" role="status" aria-live="polite"></div><div id="spendHistory" class="spend-history"></div></section>
+  </main>
+  <main id="revenuePanel" class="revenue-panel" role="tabpanel" aria-labelledby="revenueTab" hidden><header class="revenue-heading"><div><p class="kicker">PUBLIC ANDROID ESTIMATE</p><h2>재미로 보는 매출</h2></div><button id="revenueRefresh" type="button">새로고침</button></header><p class="revenue-disclosure"><strong>비공식 · 재미로만 보세요.</strong> Sensor Tower의 전 세계 Android/Google Play 지난달 월간 USD 추정치를 반올림해 표시하고 7일마다 다시 확인합니다. 국가 쿼리는 페이지 지역·순위 URL의 표준화 값이며 이 meta 추정치 범위를 바꾸지 않습니다. Android는 작업을 지연할 수 있습니다. iOS와 Supercell Store는 제외됩니다. Supercell 공식 매출이 아닙니다.</p><p id="revenueStatus" class="status" role="status">준비된 번들 추정치를 불러오는 중입니다.</p><p id="revenueSubtotal" class="revenue-subtotal"></p><div id="revenueCards" class="revenue-grid"></div></main>
+  </div>
+  <aside class="disclaimer fan-content-disclaimer"><strong>팬 콘텐츠 안내</strong><p>게임 이미지는 비공식 팬 가이드에 사용되며, Supercell의 공식 앱이거나 보증을 받은 제품이 아닙니다.</p></aside>
+
+  <dialog id="detail" aria-labelledby="detailDate"><div class="dialog-rule" aria-hidden="true"></div><button class="close" aria-label="상세 닫기">닫기</button><p id="detailDate" class="kicker"></p><h2>이날의 작전 메모</h2><div id="detailList" class="dispatch-list"></div></dialog>
+  <script src="calendar-core.js"></script><script src="user-calendar-core.js"></script><script src="user-calendar.js"></script><script src="operations-core.js"></script><script src="instant-training-core.js"></script><script src="spend-core.js"></script><script src="emergency-core.js"></script><script src="emergency-issues.js"></script><script src="emergency.js"></script><script src="assets/purchase-catalog-v1.js"></script><script src="strategy-data.js"></script><script src="game-meta-data.js"></script><script src="supercell-games.js"></script><script src="app.js"></script><script src="revenue.js"></script><script src="spend.js"></script><script src="pwa.js"></script>
+</body>
+</html>

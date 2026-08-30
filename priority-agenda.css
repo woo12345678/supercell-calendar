@@ -1,0 +1,19 @@
+.priority-agenda{margin:0 0 12px;padding:10px 12px;border:2px solid var(--ink);border-left:7px solid var(--gold);background:var(--paper-light);box-shadow:4px 4px 0 var(--shadow)}
+.priority-agenda-head,.priority-columns{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.priority-agenda h2{font-size:19px;margin:1px 0}.priority-columns>section{flex:1;min-width:0}.priority-columns h3{font-size:12px;margin:6px 0 4px}
+.priority-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.priority-card{min-width:0;padding:7px 8px;border:1px solid var(--rule)}
+.priority-card strong,.priority-card span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.priority-card strong{font-size:12px}.priority-card span,.priority-card details{font-size:10px}
+.source-controls{display:flex;gap:3px}.source-controls button{min-height:44px;padding:4px 8px;font-size:11px}.source-controls button[aria-pressed=true]{background:var(--ink);color:#fff}
+.calendar-overflow{display:block;font-size:11px;font-weight:800;color:var(--game-accent,#8b5a00)}
+@media (max-width:640px){
+  .priority-agenda{padding:7px 8px}
+  .priority-agenda-head{display:block}
+  .source-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;margin-top:8px}
+  .source-controls button{min-width:0;width:100%;padding-inline:4px}
+  .priority-columns{display:block}
+  .priority-columns>section+section{margin-top:8px}
+  .priority-list{display:flex;max-width:100%;gap:6px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;padding-bottom:4px;scrollbar-width:thin}
+  .priority-card{flex:0 0 min(82%,290px);min-width:220px;max-width:290px;min-height:54px;padding:6px 7px;scroll-snap-align:start}
+  .priority-card strong{display:-webkit-box;overflow:hidden;white-space:normal;line-height:1.35;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+  .priority-list .empty{flex:1 0 100%;width:100%;margin:0;padding:8px 2px;white-space:normal;word-break:keep-all;overflow-wrap:normal}
+}

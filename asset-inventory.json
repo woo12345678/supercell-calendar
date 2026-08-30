@@ -1,0 +1,992 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "inventoryScope": "all files except asset-inventory.json",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 87890,
+      "sha256": "1a1378b4581bf26bb153cc57b6f21e3f6123a9f28009dfd044b5e2e30cb62ef8"
+    },
+    {
+      "path": "assets/creator-channel-registry-v1.json",
+      "bytes": 1804,
+      "sha256": "6a50ba87128a38cba8f19562f5eb636334e8667cfc3ec2f141fbef4defe14efc"
+    },
+    {
+      "path": "assets/creator-event-evidence-v1.json",
+      "bytes": 1774,
+      "sha256": "781a8149914a5a31731f477b31668a1f8d236b155bb98f3069af4876944d7ea8"
+    },
+    {
+      "path": "assets/entities/boom-beach/bombardier.png",
+      "bytes": 186183,
+      "sha256": "2225652a8fd0d9bd339e627ae0aae3b64cf6a9d3d98dc33251eef8ddeba6d3b4"
+    },
+    {
+      "path": "assets/entities/boom-beach/dr-kavan.png",
+      "bytes": 206443,
+      "sha256": "8d043b8e3beb31aef2fbd718327d68bc7bc9a31121d747d740b0a5e300f116d1"
+    },
+    {
+      "path": "assets/entities/boom-beach/laser-ranger.png",
+      "bytes": 167102,
+      "sha256": "619fbb60d468649108e8682bb280b6a1547c44aad5755299fce953ab36accb47"
+    },
+    {
+      "path": "assets/entities/boom-beach/mech.png",
+      "bytes": 238223,
+      "sha256": "7fcf672858fde1fe11c1ef94750ef02b9d12528963c0ea7e369eee1b8eac88d1"
+    },
+    {
+      "path": "assets/entities/boom-beach/scorcher.png",
+      "bytes": 65541,
+      "sha256": "744f3011ab791ca5eb2f0ce80391320c6fd6ac2c14169d91d760929a0dddb046"
+    },
+    {
+      "path": "assets/entities/boom-beach/warrior.png",
+      "bytes": 84810,
+      "sha256": "d90fe4bd617a50b4570424e2792a0ab0bbb9fad177089099492b76c66d4fa599"
+    },
+    {
+      "path": "assets/entities/boom-beach/zooka.png",
+      "bytes": 83941,
+      "sha256": "cc24404915f50693b7e85a387fb0a1dcb4a62d3544f9250fc90b9590e3b9a190"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000000.png",
+      "bytes": 7569,
+      "sha256": "d66d278fefcdb6f0ca516d0cb1c162295b8e9a78506d7a27d276d3520af5e485"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000001.png",
+      "bytes": 6655,
+      "sha256": "7da43dbe9ab7c3f2344d89f0b2b8785604760592c8ac3f88b94bdca852e3342d"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000002.png",
+      "bytes": 8047,
+      "sha256": "1be9c46b5434fa170162046bf78f1d72cf2e6058c787e6fbe625cbc0d98d6809"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000003.png",
+      "bytes": 9144,
+      "sha256": "ecf596a488197eae2b63d5cfc964fde6b18d99e0e34c75f45bb12370a56c97fa"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000004.png",
+      "bytes": 8454,
+      "sha256": "14f9b8a1b2e1bb86eedbb5ca162c12700d55300136f3779b20ecf107c3e31a7e"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000005.png",
+      "bytes": 6455,
+      "sha256": "824e7a396f1793f0ae2f26769ee44ee252d02bb682b199e7045f9dfd95ecfb00"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000006.png",
+      "bytes": 9903,
+      "sha256": "e35454ce5699c26950269efeae8750ff94a6df9acbac7fa175142792b06dffb1"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000007.png",
+      "bytes": 6879,
+      "sha256": "e0b3faf34e6eaa5d01f3773cbf743fde141345606573d94bc4fbc0b4edb9594d"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000008.png",
+      "bytes": 8143,
+      "sha256": "9212517dab5e22319a6bd2375e16add319679ea8ce8cd3c6626c3808664fc6e0"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000009.png",
+      "bytes": 8102,
+      "sha256": "2aac9e55cf97e9572d60c3aeb80f3939d4b4b38ce7f6b179a122a42d27edc045"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000010.png",
+      "bytes": 8485,
+      "sha256": "7902acc0a887c2330ff49586a76e2f458e0b3677a4a425a3a8a64aa5003b064d"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000011.png",
+      "bytes": 4502,
+      "sha256": "2cd2ebfbd4264ad12a2f72e166a33b10aed0896355ea865fbb677421ad7df193"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000012.png",
+      "bytes": 3271,
+      "sha256": "69c6e013ca2576e8c1b8bec5b08c877500f3ba2bdb665d3d3f10d96d75487154"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000013.png",
+      "bytes": 7154,
+      "sha256": "b73c4a616b64b466942d7f9c8c673b176eff060f07a8312946052f482c98e900"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000014.png",
+      "bytes": 4306,
+      "sha256": "4770c213206426ec4bb02d790f43cebb3cef163e70d367a2a0a7e260ffddf5d9"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000015.png",
+      "bytes": 8452,
+      "sha256": "a462bf4ffba88d28a288e8997ebff8b2c6774d75ee9eb5ad389c60994189495f"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000016.png",
+      "bytes": 5306,
+      "sha256": "77a1f671827e748656ff43390c10a44f112c7c6db1a7ffc6462df353bb3f546b"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000017.png",
+      "bytes": 5971,
+      "sha256": "eff5a54422f41d123966b84a56e362682731608261d38a7f776690da96e5c055"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000018.png",
+      "bytes": 5168,
+      "sha256": "6c05ad20edecdf49516c4d0925d1ed667e923a1bfe1a89656cfc082e83827363"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000019.png",
+      "bytes": 6576,
+      "sha256": "d841573d03e217f550b49f144c637eac74fc689a2a30a4d82d4c95e6b2be6f95"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000020.png",
+      "bytes": 8353,
+      "sha256": "185e695294129c65b60b8083fbf3b30755904a6d54ffd9ad2507e06f6d6ef099"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000021.png",
+      "bytes": 6344,
+      "sha256": "c6710897dff4bbd7c3acac18f5c96c98b363ebd1abf4dc6bf094f0114093298e"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000022.png",
+      "bytes": 4962,
+      "sha256": "4c4ac1feaa2acf1ad5d72e3955fa3ad6e41c3b22ec55baa90ae3c51ff775127a"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000023.png",
+      "bytes": 4252,
+      "sha256": "63043e10c98fb1487a3e6f795ca916e2759ab0bd0d310db82e01292d87c090b9"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000024.png",
+      "bytes": 8090,
+      "sha256": "8d4cf5bf7b764887e32b35415501b0b8a9f5e894a4f9af4c7ff7eb4ff988888e"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000025.png",
+      "bytes": 8969,
+      "sha256": "c4ae7e8edddc2e0f0349ecc1f77fadbfe6b2f02ae8e84f96931a6fe28ed923a3"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000026.png",
+      "bytes": 5493,
+      "sha256": "8da5459c526644f48772aefa63396f296725fe8f2c8d34bd2989f3d12fdef6cd"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000027.png",
+      "bytes": 4024,
+      "sha256": "604eb7ce4e2dd2db298b46d83d29078659e582f95929659c568dc8f27f50d6b5"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000028.png",
+      "bytes": 7600,
+      "sha256": "567f1a35250bf12e9865c4509af614fb3627cd6902f91b345e33d033a2acaa8e"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000029.png",
+      "bytes": 5943,
+      "sha256": "5ddd04f1e1f8d79704afa14dd22ac6895604ddd03463bd3475eb28285d6b6759"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000030.png",
+      "bytes": 6421,
+      "sha256": "e005b99307a4b834a49ce146b02a15dd04b897bb63ccf3146c4a85d5419fef45"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000031.png",
+      "bytes": 4290,
+      "sha256": "3944a57438b45cfa8cc7c1c1ee396368c50dda23d1e85bebffed10e3a1b1f350"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000032.png",
+      "bytes": 7529,
+      "sha256": "d23e2c82dd20a7e806f3872a99a9ddf8ac20a5023fa8e4752f689c307d7750d0"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000034.png",
+      "bytes": 6358,
+      "sha256": "f2a39cc153ad506eefdae82e640b74d0251013ded8231966f7906d2b60eaff6f"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000035.png",
+      "bytes": 6569,
+      "sha256": "0990b0ac25aaea85bd53cd367eeab3bd7e8c5f39428c65b673e89f9fe37e2f25"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000036.png",
+      "bytes": 6595,
+      "sha256": "6e5bfe0fe9fed538b995908636e071dce69d54df1b26a043839cc1d0e4022780"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000037.png",
+      "bytes": 7340,
+      "sha256": "9b510b5617dfecb5ea82ec09844a05443c2f3827d5965e4e3f81ff34107287eb"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000038.png",
+      "bytes": 6354,
+      "sha256": "cecf8334caaf55379bb4724a2efe652ee6a2461e092729ce79b540602b4785ea"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000039.png",
+      "bytes": 6193,
+      "sha256": "b100edf84c57eddb4cf1ecd009302a564022bc8d91978abc40e064a561f74749"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000040.png",
+      "bytes": 6703,
+      "sha256": "63214934347c0664bafbf399c1bfda668babf3cb0ef4849a5d4b742bcc1d83f9"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000041.png",
+      "bytes": 8007,
+      "sha256": "aa5d787341a970aeab0c04ebc4b86380201d11d990d5b1d1e08db0c136d557ed"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000042.png",
+      "bytes": 9440,
+      "sha256": "d92805f568a200c814f030985a0a2379e2640ef95371d4885f1b948d1b1757d8"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000043.png",
+      "bytes": 3523,
+      "sha256": "31f2faa8cea1136f9f6799ebf428c80b353f12c527f8d82414b3e33e1ebaa738"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000044.png",
+      "bytes": 5087,
+      "sha256": "709b2b90865c6e9908542d4ba1e9073199fe43551a40d9cd107225aa92eb4c7e"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000045.png",
+      "bytes": 4420,
+      "sha256": "7005f53bb5db92d07cd266799cec30066f1b2b1d97be2fef0a565d848acae16b"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000046.png",
+      "bytes": 9741,
+      "sha256": "1013c6d5a0e70edd88feb0966d026d1d629344baeab656ae9f3ab6b7b904efc0"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000047.png",
+      "bytes": 5742,
+      "sha256": "bc151d5ba50f2a7f80f656bec6baf14006601f40fce788f857bd732dd3ea7ff7"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000048.png",
+      "bytes": 5967,
+      "sha256": "6bbae5c341d474902981f4eeb3f7cf84d34eb9b8d387d55273a46c7c56b7d3d7"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000049.png",
+      "bytes": 5766,
+      "sha256": "6f9b37fd2ec6a7abca3f39c50a80b7bc4c424c06c1ab37cf62595630549066d0"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000050.png",
+      "bytes": 11418,
+      "sha256": "9d267890e80496de77f323d47f4c333d0eef6dc3e8f36037373cdb1bd4dd074e"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000051.png",
+      "bytes": 5256,
+      "sha256": "d0a59ee1a377e35147a2ce7007714e86c701d818dda1c8ea91927ff9ccf4755d"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000052.png",
+      "bytes": 5659,
+      "sha256": "452f20258fdedcf0474ace307689aae445dab4dda51de602d2fd2a6aa7ec73f5"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000053.png",
+      "bytes": 5631,
+      "sha256": "80b36ef4314bd98ad2f4d1b2ec937de68960b613e89f7f2d572fd32f7213e507"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000054.png",
+      "bytes": 4958,
+      "sha256": "80962c152b0ef7c9f75a9ff80299e2c553617ea6c91ea48fec8f0c569cd35538"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000056.png",
+      "bytes": 4398,
+      "sha256": "ca3f1973ca97858a49ad19e1ab14e1ec6c4d4e468e91c10fb336b5eabfa386e7"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000057.png",
+      "bytes": 9977,
+      "sha256": "ff4027aef9a81c886cb4413fc7503b8a75a9fcb31f4ad8e526d855b649dd7315"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000058.png",
+      "bytes": 10832,
+      "sha256": "b522358db37107584ac59b36ee03659ce17c03609fa71b303644c2f989f8e35b"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000059.png",
+      "bytes": 5900,
+      "sha256": "82dd3de192a31d05d9e069a74a8a7d2f0172b65b2bee5bac3e37439a9148ac33"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000060.png",
+      "bytes": 5615,
+      "sha256": "58e2dec4c2b8abc13f16ddd2c22efea6344b189f40069dc0564de931ebaf3a14"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000061.png",
+      "bytes": 6810,
+      "sha256": "e359773aa54886b048eb0e25d6e44502b1530634bd0392391bd7a326d23842c4"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000062.png",
+      "bytes": 7412,
+      "sha256": "d4ff82b1d7f35c0654e598c009057b9d4537406c27b36424bbc96cc2b6ead773"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000063.png",
+      "bytes": 9219,
+      "sha256": "634dddf7bfa1887db6e22630fffa887330ed4756b2dff4af2d04638265cc3466"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000064.png",
+      "bytes": 6386,
+      "sha256": "edbb2565b497a626a2fbfd5d04a9fc7ca5c46eb4e6fd6db2e9d30953c68c68db"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000065.png",
+      "bytes": 8769,
+      "sha256": "3cf582b208eed41eda88b7eb57ecf44a209352df899c2a1bb189f8b4759f1962"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000066.png",
+      "bytes": 6300,
+      "sha256": "36b266748db3bbc349dcc1937120ec91b04becfac58597a2f0eee5424910738b"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000067.png",
+      "bytes": 8807,
+      "sha256": "5ff06998980374163182794df5bbb704770031552691ba573a8eb6861e506bfe"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000068.png",
+      "bytes": 8965,
+      "sha256": "557574900dc47ad9d10de3361f9a48cfac87da338127416ef8bdcb95dbbb8924"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000069.png",
+      "bytes": 6324,
+      "sha256": "b25e60a148d95e9f0f26ca3c00cf039dc1797880061c2c48921751f3dd5857b1"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000070.png",
+      "bytes": 7186,
+      "sha256": "1f2bac23978991b02e1fee47ae04b957dbee53e7a2f2eed2428811c9eb69c282"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000071.png",
+      "bytes": 8516,
+      "sha256": "8a2ff09c5fc372fca358084aa50ff6c65abdaead7815dd6e9aa15f95ebd8bd5b"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000072.png",
+      "bytes": 7301,
+      "sha256": "66f4d4bf8ec11bc9dc839b255c175d56dfea39bec937a2bf47f64918d6d3a6a9"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000073.png",
+      "bytes": 7118,
+      "sha256": "9b181f0a3419544931f319434555ae28c4162cb570261cae1ef682cd7ec055b5"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000074.png",
+      "bytes": 5504,
+      "sha256": "4e72d1af741b70fa6fe71a15671c0cc22770dc031abdaa61e8a6985b68117e7f"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000075.png",
+      "bytes": 5837,
+      "sha256": "35b5928bf2ac691cfea5b6ccef6d87b571d67d8d067b91552892259b7272d049"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000076.png",
+      "bytes": 6245,
+      "sha256": "1e44974c4c9ca4637107436b43ab9a7f88662cf2c48c5df020c476f07f3ca254"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000077.png",
+      "bytes": 6790,
+      "sha256": "f20f6fb539e802c0bc89232048c03c22c047800a960cc53df7cf5cfdd1603dbf"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000078.png",
+      "bytes": 9551,
+      "sha256": "ba9edaf01a7b275891df2d37fa1722953b59419c869d691ea780366f77ce5f39"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000079.png",
+      "bytes": 8089,
+      "sha256": "1026aacff7f937bde360503af96238a75f3d5973adcd9407d88fd7651eacdcdc"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000080.png",
+      "bytes": 8364,
+      "sha256": "bc2b95722c98ee540c3543caf0b0dc43dc9208bf4089f86d0f40a1646ad6ccd8"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000081.png",
+      "bytes": 8450,
+      "sha256": "6ed9eef5e338446944f435721bc3d058050d644a3c63c0bef22632b72ba07a6a"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000082.png",
+      "bytes": 8902,
+      "sha256": "e184901b6c65958c7685409b3e9fa8a01593c99170722abf77cf7c8e9970437f"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000083.png",
+      "bytes": 6309,
+      "sha256": "e8928aa7e45cc5bbaba1673c0ab1b657565fa79f88597047952e2b3552da48d8"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000084.png",
+      "bytes": 8764,
+      "sha256": "b6843ddd3250054c0ede0315647422b74a6b4b51915ad9d0394fc9f163547a9f"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000085.png",
+      "bytes": 8148,
+      "sha256": "7a3ed43a6a8fe38cc848305796050a1d90b07534bb71f478df13103a6f9b42b1"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000086.png",
+      "bytes": 9061,
+      "sha256": "7e5240770b6617ea681620fb4bd737c84cab1979e5dcebbe6cc6eb5c2b8785eb"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000087.png",
+      "bytes": 10081,
+      "sha256": "fe5f4640a02a687041467c682e63415886d975b3f668b53d2ecb35fc9496dc8d"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000088.png",
+      "bytes": 9088,
+      "sha256": "d529a9f13fde0496dc61c12d59419279d9434f4414d66d86537d97da2736558b"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000089.png",
+      "bytes": 7809,
+      "sha256": "34af11bec5e7496765aa4de4d1a1c68aefc9fbfe3f9bf0e77a873ff6065ba88b"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000090.png",
+      "bytes": 7348,
+      "sha256": "0c6e351eccbdf6fb20cbb018eae92683639f594350a30935cb12c7896f9dd293"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000091.png",
+      "bytes": 6833,
+      "sha256": "110c3fc1627d94f2e8c46444eed2beae88867951011300084a6438a060246e18"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000092.png",
+      "bytes": 6133,
+      "sha256": "08219c321052cba88cbee34dd8adea1cc0790466333f6b58d284ec7cbc2f2400"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000093.png",
+      "bytes": 7751,
+      "sha256": "8e5c333e19f0efbb3237812d7ec77cfacc5e929abd6ebe5aedbb2ddefcc9a327"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000094.png",
+      "bytes": 6900,
+      "sha256": "a57c5e74657c9339cb1ac492db3f0d0ce188cc50087d7bf6e304e0d8a43eaf94"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000095.png",
+      "bytes": 6713,
+      "sha256": "78d49d2ccd70c54b60a3b9cead57a47ec88a43d01b15dee3e1a1396d81965760"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000096.png",
+      "bytes": 3232,
+      "sha256": "cd154100bafbf0686f4e351b05ec53953643f5029e36cfa16fb2ebedd1a0f68d"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000097.png",
+      "bytes": 5536,
+      "sha256": "9f714086bb536954f682a66b1044148f0ffbee8210b866e6d5517853ad875970"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000098.png",
+      "bytes": 8321,
+      "sha256": "0b54a424f8270ad053d8c26f9d44060fc56fb6c11d39a4430210345a17271710"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000099.png",
+      "bytes": 7415,
+      "sha256": "39c795ac1ed2ba8bbf94400e9156fb694fa51924fdc379c0c48faf84fc43ab9d"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000100.png",
+      "bytes": 6414,
+      "sha256": "bfac3cbbdabec8d0a31185f6fb953d570e2e78571bc37b5fb4124512bb981a8e"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000101.png",
+      "bytes": 7792,
+      "sha256": "af6cd2dc88cab027f2865b3f19e02f445f80b1cd895f3ffaefdd458bd2bd996e"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000102.png",
+      "bytes": 7128,
+      "sha256": "305cd0a1c096164b0c7f92a2a13d668cfdb29a68f6123bc8362516c34c306d49"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000103.png",
+      "bytes": 7826,
+      "sha256": "512d91b758d1d9b118c1bb548c6cc7f25e9386571b442c95a146edba8ff76294"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000104.png",
+      "bytes": 6796,
+      "sha256": "b8f8d98188a8adacc6d0694a744f4a03ee8304161e80c226be3ac3db44a7c6e5"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000105.png",
+      "bytes": 11326,
+      "sha256": "3e17e4d616e7c29ccd24a1522b9e49219c0548d1316bb5c2078b26fb0735a928"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000106.png",
+      "bytes": 6155,
+      "sha256": "68dfa2d3350d42432319bb24d0cf31b2468aad723817fc703b4e00078ff6fb22"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000107.png",
+      "bytes": 9972,
+      "sha256": "3ffcf404f7cebbafb117ff83da220e416c881b56c8eb4ec2d355e18b96cc3cac"
+    },
+    {
+      "path": "assets/entities/brawl-stars/16000108.png",
+      "bytes": 11871,
+      "sha256": "d4856baea539f0a8f399c154d4e056813f430116169027d6eba46ac2f7ab906c"
+    },
+    {
+      "path": "assets/entities/clash-royale/arrows.png",
+      "bytes": 39782,
+      "sha256": "ba92d2d1fc7ecb4c0a174a4f4512993ddbc5e13d75c723665bea33d9b7f6febc"
+    },
+    {
+      "path": "assets/entities/clash-royale/bats.png",
+      "bytes": 40555,
+      "sha256": "1fd883d6ebc3a80d31177779594569894aa59168e4e9bde847571a1b16d28d96"
+    },
+    {
+      "path": "assets/entities/clash-royale/bomb-tower.png",
+      "bytes": 40456,
+      "sha256": "cba921c09137b74054f7891438be30722242fb56d505d3c0d428a37e8701dd4f"
+    },
+    {
+      "path": "assets/entities/clash-royale/bomber.png",
+      "bytes": 42837,
+      "sha256": "1b6eef4152828d70d0e5b6d43263c290d07c047f66c746e46f48645eba7d70fb"
+    },
+    {
+      "path": "assets/entities/clash-royale/cannon.png",
+      "bytes": 40465,
+      "sha256": "f1462ea33059ecd4bcbb7f5fa39cf2045e1ebb5ae6f83668ec4cbaad0bb00ebe"
+    },
+    {
+      "path": "assets/entities/clash-royale/earthquake.png",
+      "bytes": 36549,
+      "sha256": "edc1ae2058b70eaa62dd8c62cad0bff8860cf4a999ec725c94842602025d3309"
+    },
+    {
+      "path": "assets/entities/clash-royale/fireball.png",
+      "bytes": 37677,
+      "sha256": "e54e72e336c4e18727087c0411990b91afe26baa1edae6796a52f1052b1a3a61"
+    },
+    {
+      "path": "assets/entities/clash-royale/firecracker.png",
+      "bytes": 39017,
+      "sha256": "d1e84e2548a7ed7623c43b5204b40b3aa31938efaf079a521a68d79a96d25432"
+    },
+    {
+      "path": "assets/entities/clash-royale/fisherman.png",
+      "bytes": 43790,
+      "sha256": "591af4108fae03d9c89571a476e5c163625efa99793afa0c98a30492cd54b1b0"
+    },
+    {
+      "path": "assets/entities/clash-royale/giant.png",
+      "bytes": 41557,
+      "sha256": "849b17a615d85e79a3ddf9046e2eedc5d25a4079ac859234a330ad53ce767567"
+    },
+    {
+      "path": "assets/entities/clash-royale/hog-rider.png",
+      "bytes": 41197,
+      "sha256": "efb4e8d5b9438539a76b5d1c3cf69ab23a88ead0de0c44b582f01f4830e1c17b"
+    },
+    {
+      "path": "assets/entities/clash-royale/hunter.png",
+      "bytes": 42598,
+      "sha256": "4ae2b9490eaf01e933edc8169f762bac7ad86112ac337ddbfd78447947d93b16"
+    },
+    {
+      "path": "assets/entities/clash-royale/ice-spirit.png",
+      "bytes": 41827,
+      "sha256": "b521fa2ff644b939847d104b61befe4588ef023dc05f110b9ac992dede23efe0"
+    },
+    {
+      "path": "assets/entities/clash-royale/knight.png",
+      "bytes": 45586,
+      "sha256": "6e6784fcca320b3343889dcf02d814814283e92bf21817af9b228f746b9f132f"
+    },
+    {
+      "path": "assets/entities/clash-royale/lightning.png",
+      "bytes": 43588,
+      "sha256": "2bb68912eab0bd59647a8157d0f42f5c87b0c51ea4b1c2bd12df84d5ad4314d8"
+    },
+    {
+      "path": "assets/entities/clash-royale/magic-archer.png",
+      "bytes": 42887,
+      "sha256": "db048f078b28595942ca4fc91b8e7ba468ad4773ffa6b9ad1c177c191ff1bb69"
+    },
+    {
+      "path": "assets/entities/clash-royale/miner.png",
+      "bytes": 42549,
+      "sha256": "5a8af2053c592bdc6af968fa89666e12ae704f0d9015c1da0631068074599602"
+    },
+    {
+      "path": "assets/entities/clash-royale/mini-pekka.png",
+      "bytes": 43097,
+      "sha256": "b3705ff0a9ffdac5c1ca779dd78e528f355e2a9b9f5e5568c623af7da6c6218f"
+    },
+    {
+      "path": "assets/entities/clash-royale/mother-witch.png",
+      "bytes": 43331,
+      "sha256": "ced7c74854752dba2c8d4a92c152e501d8c285c5d5e24567318bb28c7833f8a0"
+    },
+    {
+      "path": "assets/entities/clash-royale/musketeer.png",
+      "bytes": 42018,
+      "sha256": "ea108bcc68a310c4aa74e6c592ab410a662806cfe3fddf6c37c0ca83facb7ab0"
+    },
+    {
+      "path": "assets/entities/clash-royale/phoenix.png",
+      "bytes": 40014,
+      "sha256": "48db650db8f7696c28efe4c8c79c41cd06ccbc78d27ebefd0f362358647cead4"
+    },
+    {
+      "path": "assets/entities/clash-royale/royal-giant.png",
+      "bytes": 40725,
+      "sha256": "adf13431c9e643ffa128b14e9ceb82424aed2fa762172cd40db616c54b005184"
+    },
+    {
+      "path": "assets/entities/clash-royale/skeletons.png",
+      "bytes": 39166,
+      "sha256": "0839c99e8178e7a5ab3b439da2ede9f3628da50757605f1b0d435e11c90ba85b"
+    },
+    {
+      "path": "assets/entities/clash-royale/spear-goblins.png",
+      "bytes": 44537,
+      "sha256": "fb25cb8a25719f085a711a8b2b0b4ccf3f9d6ca02e03eea1c0e2e319590240cd"
+    },
+    {
+      "path": "assets/entities/clash-royale/the-log.png",
+      "bytes": 45054,
+      "sha256": "18002cf8e8f26ffe443aa68c975b48fc76f839e25bd739fdcc7ee4ce50f4ecb0"
+    },
+    {
+      "path": "assets/entities/clash-royale/valkyrie.png",
+      "bytes": 44877,
+      "sha256": "d0fbcf6b893fdd6dd04e3d6f26578eaa3bb99619730170096c431c780f68c74a"
+    },
+    {
+      "path": "assets/entities/clash-royale/wall-breakers.png",
+      "bytes": 44811,
+      "sha256": "46dfc44e2d7a8fb706b352131db465c7b420df6bf938d42f4a795732485e21e2"
+    },
+    {
+      "path": "assets/entities/clash-royale/zap.png",
+      "bytes": 42685,
+      "sha256": "baa1165717a41d10e4d3b15f61ce85e9749e8e35409925f1b2b4d28ee90a575f"
+    },
+    {
+      "path": "assets/entities/provenance.json",
+      "bytes": 62757,
+      "sha256": "70b60441eb3097524cdd0c3f37c318eabb9dd6ff0cfb97f160bbe41d102146a2"
+    },
+    {
+      "path": "assets/game-themes/boom-beach.png",
+      "bytes": 206443,
+      "sha256": "8d043b8e3beb31aef2fbd718327d68bc7bc9a31121d747d740b0a5e300f116d1"
+    },
+    {
+      "path": "assets/game-themes/brawl-stars.png",
+      "bytes": 7569,
+      "sha256": "d66d278fefcdb6f0ca516d0cb1c162295b8e9a78506d7a27d276d3520af5e485"
+    },
+    {
+      "path": "assets/game-themes/clash-of-clans.webp",
+      "bytes": 49756,
+      "sha256": "e0d63ed29f0d0a344265d314c7fd3372b5890713f18a7db7b3d8fec34ab1b3d0"
+    },
+    {
+      "path": "assets/game-themes/clash-royale.png",
+      "bytes": 45586,
+      "sha256": "6e6784fcca320b3343889dcf02d814814283e92bf21817af9b228f746b9f132f"
+    },
+    {
+      "path": "assets/game-themes/hay-day.webp",
+      "bytes": 57866,
+      "sha256": "b4db68b6e35e4fdf8b43369bfcc44d74ee9e3adcceffd531bba44d0092e516a8"
+    },
+    {
+      "path": "assets/game-themes/provenance.json",
+      "bytes": 2020,
+      "sha256": "241cb8ed8c53f474fae15dfe963dda26fedd2b63907f4e8487f74935b7e24a3b"
+    },
+    {
+      "path": "assets/purchase-catalog-v1.js",
+      "bytes": 3781,
+      "sha256": "69fe60e11ae86454a276eca2e5da1d54ba6a757d5b3bc261595c02250d7971c3"
+    },
+    {
+      "path": "assets/pwa/apple-touch-icon-180.png",
+      "bytes": 675,
+      "sha256": "b28dec9ea3111ee8786413c57b4957b5c4c31b962a1479edd407faccb702056e"
+    },
+    {
+      "path": "assets/pwa/calendar-icon-192.png",
+      "bytes": 711,
+      "sha256": "63c321370978c392a6d86489625d180b2aabc0c95cb4bea41e3759bd3071a423"
+    },
+    {
+      "path": "assets/pwa/calendar-icon-512.png",
+      "bytes": 2030,
+      "sha256": "add2577de70ff1fd24cd17ce4a32f74abfca1aa4411844cb49a4ea5bc18fc1b0"
+    },
+    {
+      "path": "assets/pwa/calendar-icon.svg",
+      "bytes": 681,
+      "sha256": "c9cf7730d11e3207a39651137fedf6fcdfc56844f7b63942e049073e5dedb5a4"
+    },
+    {
+      "path": "assets/pwa/provenance.json",
+      "bytes": 553,
+      "sha256": "34e67418db9c1ceeeb32533bb9c7f703c4f5b14d15a83cfb1565243778ac3643"
+    },
+    {
+      "path": "assets/revenue-estimates-v1.json",
+      "bytes": 4429,
+      "sha256": "48d1d473b891892181fb47f526c9c2732c63c0dc964655ed6dff44c89d985701"
+    },
+    {
+      "path": "assets/revenue-logos/boom-beach.jpg",
+      "bytes": 68890,
+      "sha256": "04a1d264674ac6edd6aa93c971b3f6b65b7bb9b2ff6f1d64097118b7c24e7ec0"
+    },
+    {
+      "path": "assets/revenue-logos/brawl-stars.jpg",
+      "bytes": 58829,
+      "sha256": "3a3c1b44c7f44e1484ecbd67142f5d0d3c294a48707436c2c1e4d1cd69a8cf41"
+    },
+    {
+      "path": "assets/revenue-logos/clash-of-clans.jpg",
+      "bytes": 56275,
+      "sha256": "d89e22abb3acbac118a0ae251eb7fa9623b4dcd992732abc4d4bbe3707c33940"
+    },
+    {
+      "path": "assets/revenue-logos/clash-royale.jpg",
+      "bytes": 78269,
+      "sha256": "da96612a8c9a5a106c40fbb4aa70432dc190ea9b1141a7999f63cdf4fb3cfaa9"
+    },
+    {
+      "path": "assets/revenue-logos/hay-day.jpg",
+      "bytes": 50339,
+      "sha256": "195754eb6ae75b11a93564ed1462bebe3d40739cf0508a2baaac97fa5d30dc93"
+    },
+    {
+      "path": "assets/revenue-logos/moco.jpg",
+      "bytes": 34720,
+      "sha256": "97855d58618cc2bf72fbbf6618864498e1722697166a61af22628efc5ad6ffe5"
+    },
+    {
+      "path": "assets/revenue-logos/provenance.json",
+      "bytes": 5553,
+      "sha256": "5825af977125768b39bb0132273aca27c9f569e1fcd6e82d04bb44847e5fcf73"
+    },
+    {
+      "path": "assets/revenue-logos/squad-busters.jpg",
+      "bytes": 100169,
+      "sha256": "1a4466ebb4737049279bb27ed989544a5b5e87324ab465a4415f5fbd8fcfefef"
+    },
+    {
+      "path": "calendar-core.js",
+      "bytes": 76864,
+      "sha256": "cd8382a9b44add59c80e893a88ed967492ef786bd7335aa229a2d2a7c1de8e08"
+    },
+    {
+      "path": "daily-brief.css",
+      "bytes": 1288,
+      "sha256": "2886efc70bb745102e8351124a34e2c8a7f889cb85fb7c86ff27fa1f1fe8e823"
+    },
+    {
+      "path": "daily-dashboard.css",
+      "bytes": 3347,
+      "sha256": "bc7e87feeaa34edda0b5c36522645c5b52f33d6c3dd65a768bc9d000cf02212e"
+    },
+    {
+      "path": "emergency-core.js",
+      "bytes": 6240,
+      "sha256": "8a446d1fa6765e4e93520e2469bafb90f16bfd1f70033c509d96a00e200f112f"
+    },
+    {
+      "path": "emergency-issues.js",
+      "bytes": 2058,
+      "sha256": "0e503d1c2f7d088da3c3f5ea0a1ec957eaebcd5d49d7df545761dcb3bdd3b938"
+    },
+    {
+      "path": "emergency.css",
+      "bytes": 2250,
+      "sha256": "6292f1550ae6ab46ca1be1c430bfe094f04a27d9456f745272c058a453f724ea"
+    },
+    {
+      "path": "emergency.js",
+      "bytes": 5436,
+      "sha256": "65d3f7e60996be2410e05a4e5e0862fd4a69362c46b49f774c553aa20ed1b1f3"
+    },
+    {
+      "path": "entity-images.css",
+      "bytes": 878,
+      "sha256": "de762fe135b719d3149b2814b9834e29ecfd9eb4306ec2a2ce8f7d8fa1b3a09b"
+    },
+    {
+      "path": "game-meta-data.js",
+      "bytes": 12122,
+      "sha256": "7636c12759ad9cb0affa45551d9a40e66161855f816b33cfce991548cea6bb11"
+    },
+    {
+      "path": "index.html",
+      "bytes": 29825,
+      "sha256": "fe3fc9f7d05d44a9f18559134dacfce94c5035f5f0ea0eed99e800b8443b4371"
+    },
+    {
+      "path": "instant-training-core.js",
+      "bytes": 6152,
+      "sha256": "7eb52b0bd28fd9a38ecf02e07353a783a716bf2c8cd5245ad5396757a0fada3f"
+    },
+    {
+      "path": "instant-training.css",
+      "bytes": 1736,
+      "sha256": "e3fbc1bf8e5f786047de629f98f2309e403a1c5fd785283e85e9b78486c31592"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 499,
+      "sha256": "bfded47186ed03afd41612fbed82c49aa2f461140cc5b29446404831b636cbe3"
+    },
+    {
+      "path": "operations-core.js",
+      "bytes": 10289,
+      "sha256": "51988033dbc83da06eee1dd9104b3dd68a874e7cbd03f26fab3f9bb4d9fdc991"
+    },
+    {
+      "path": "priority-agenda.css",
+      "bytes": 2035,
+      "sha256": "28f88c5f9a651cb09610d9d5fa919ceba5f562fe3bdfde9e9c5f058a0305d9b6"
+    },
+    {
+      "path": "pwa.js",
+      "bytes": 2488,
+      "sha256": "3770404ffdde7b7b50daea926dfdeb4a3cdf87a817e7907cef151ab0b0ebaea1"
+    },
+    {
+      "path": "readability.css",
+      "bytes": 4089,
+      "sha256": "8d71b300cfa839cfcb6ac188a23a466b4fb2aeddddc5464f6dd176ad61b299a3"
+    },
+    {
+      "path": "revenue.css",
+      "bytes": 1842,
+      "sha256": "a916e03ca7b6fb5c4af7c29270e3157afd7a4e3e59a231a18d36c3f35ac4c134"
+    },
+    {
+      "path": "revenue.js",
+      "bytes": 5003,
+      "sha256": "a8b8fec59f20958e2e466b85a40e161afc50530643fc07d7db1922f0e374605b"
+    },
+    {
+      "path": "service-worker.js",
+      "bytes": 5072,
+      "sha256": "3c4574d43ef2adbe394e42b21e94e24af07fc6722dcab6456bb03a14788dcbd6"
+    },
+    {
+      "path": "spend-core.js",
+      "bytes": 7679,
+      "sha256": "5d42b2d9cc72df959c30cf95e1fa92ae285bd06d0b1cea0518a7fcea85ec4f6a"
+    },
+    {
+      "path": "spend.css",
+      "bytes": 2530,
+      "sha256": "03d58f22aba473184fc6615aba47d5384b9544a2e5ad0b68ecc3300932ee1a7d"
+    },
+    {
+      "path": "spend.js",
+      "bytes": 8934,
+      "sha256": "7bb3bcb7a51d83b7e9a92bb43d76fc25cb073b5ba15169e400dc8f8d777288c2"
+    },
+    {
+      "path": "strategy-data.js",
+      "bytes": 52591,
+      "sha256": "1c7ea5745ea86416925e9ea0ce09523d2735a19645d4b879a5abb195a703e4db"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 20805,
+      "sha256": "0d386f220fbc73d074d9e46604a3af7ba15db71faf9af5a9af5c0139ecae6ee2"
+    },
+    {
+      "path": "supercell-games.css",
+      "bytes": 6407,
+      "sha256": "2d17c7efa758dfa4e0de728a19e9b6857a0c4a2495fa718918767fc4b142ffe8"
+    },
+    {
+      "path": "supercell-games.js",
+      "bytes": 62825,
+      "sha256": "4bf92fa88740c965a79d1f7a8e7ae5a3df92f7a0fb3eb7bb9470ed3355df701e"
+    },
+    {
+      "path": "user-calendar-core.js",
+      "bytes": 5909,
+      "sha256": "a0a28bdb45e1036f5a95c560452a3ac793bc36b30b7427140445ff3d413d05b5"
+    },
+    {
+      "path": "user-calendar.css",
+      "bytes": 1787,
+      "sha256": "59f818fa6ccf6cfaf9e7062b2af451a6ae437d4f2a91d20fa84a7f43e53506cc"
+    },
+    {
+      "path": "user-calendar.js",
+      "bytes": 5838,
+      "sha256": "1995f93e21fb610a579534733cf770360832709b993908a67762182901b3b3b7"
+    }
+  ]
+}

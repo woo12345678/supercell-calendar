@@ -1,0 +1,11 @@
+.emergency-count{display:inline-grid;place-items:center;min-width:20px;height:20px;margin-left:4px;padding:0 5px;border-radius:10px;background:#b52222;color:#fff;font-size:11px;font-weight:900}
+.emergency-panel{width:min(1180px,calc(100% - 32px));margin:22px auto 44px}
+.emergency-heading{padding:18px;border:2px solid #6d1515;background:#fff7e8}
+.emergency-heading h2{margin:4px 0}.emergency-heading p{line-height:1.55}.emergency-section{margin-top:18px}.emergency-list{display:grid;gap:12px}
+.emergency-card{padding:16px;border:2px solid #7b2a24;border-left-width:7px;background:#fffaf0}.emergency-card-head{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}.emergency-card h3{margin:3px 0}
+.emergency-badges{display:flex;gap:5px;flex-wrap:wrap}.emergency-badge{padding:4px 7px;border:1px solid currentColor;font-size:11px;font-weight:900}.truth-player_report,.status-monitoring{color:#72510a}.severity-critical{color:#a00000}.severity-high{color:#9a3d12}
+.emergency-game,.emergency-source,.emergency-verified{font-size:12px;color:#4c5558}.emergency-action{font-weight:800}.emergency-actions{display:flex;gap:8px;flex-wrap:wrap}
+.emergency-actions button,.emergency-actions a,.emergency-resolved summary{min-height:44px;padding:9px 13px}.emergency-actions button,.emergency-actions a{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;border:1px solid #243238;background:#f3dfaa;color:#182226;font-weight:900;text-decoration:none}
+.emergency-evidence{margin:12px 0}.emergency-evidence summary{min-height:44px;display:flex;align-items:center;font-weight:800;cursor:pointer}.emergency-evidence-label{font-size:12px;font-weight:800}.emergency-evidence blockquote{margin:8px 0;padding:10px 12px;border-left:4px solid #7b2a24;background:#fff}
+.emergency-stale{opacity:.67;border-color:#766e62;background:#e8e2d6}.emergency-empty{padding:18px;border:1px dashed #777;background:#ffffff80}.emergency-resolved{margin-top:20px}.emergency-resolved summary{font-weight:900;cursor:pointer}
+@media(max-width:480px){.emergency-panel{width:calc(100% - 20px);margin-top:12px}.emergency-card-head{display:block}.emergency-actions button,.emergency-actions a{flex:1}.main-tabs{overscroll-behavior-x:contain}}

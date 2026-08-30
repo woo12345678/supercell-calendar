@@ -1,0 +1,8 @@
+(function(root,factory){var data=factory();if(typeof module==='object'&&module.exports)module.exports=data;else root.EmergencyIssues=data})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';
+function issue(value){return Object.freeze(value)}
+return Object.freeze({schemaVersion:2,reviewedAt:'2026-08-29T20:00:33.291Z',issues:Object.freeze([
+issue({id:'coc-hero-journey-rewards-20260828',gameId:'clash-of-clans',kind:'BUG',severity:'HIGH',status:'INVESTIGATING',authority:'OFFICIAL',title:'Hero Journey 진행 보상 일부 누락',summary:'일부 Hero Journey 진행 보상이 누락되고 있으며 Supercell이 수정 작업 중입니다. 보상은 예정된 업데이트에서 다시 제공될 것으로 안내되었습니다.',action:'게임을 최신 상태로 유지하고 예정된 업데이트와 공식 지원 공지를 확인하세요.',sourceUrl:'https://support.supercell.com/clash-of-clans/en/index.html',sourceQuote:'Missing some Hero Journey rewards after making progress? Don’t worry, Chief. We’re working on a fix and the rewards will be available again in an upcoming update.',firstSeenAt:'2026-08-28T05:28:49.000Z',lastVerifiedAt:'2026-08-29T20:00:33.291Z',reviewBy:'2026-08-31T20:00:33.291Z'}),
+issue({id:'boom-pass-purchase-20260828',gameId:'boom-beach',kind:'SERVICE_ISSUE',severity:'HIGH',status:'INVESTIGATING',authority:'OFFICIAL',title:'일부 플레이어 Boom Pass 구매 불가',summary:'일부 플레이어가 Boom Pass를 구매할 수 없는 현상을 Supercell이 확인했으며 해결 작업 중입니다.',action:'반복 결제 시도를 피하고 게임 및 공식 지원에서 상태를 확인하세요. 보상 여부는 추측하지 않습니다.',sourceUrl:'https://support.supercell.com/boom-beach/en/index.html',sourceQuote:"We're aware that some players are unable to purchase the Boom Pass. Our team is working to resolve this issue as quickly as possible.",firstSeenAt:'2026-08-28T05:28:49.000Z',lastVerifiedAt:'2026-08-29T20:00:33.291Z',reviewBy:'2026-08-31T20:00:33.291Z'})
+])});
+});

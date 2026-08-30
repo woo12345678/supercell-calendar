@@ -1,0 +1,27 @@
+:root{--readable-muted:#4f5b58;--text-secondary:12px;--text-label:11px;--body-leading:1.45;--card-rule:#9f9278}
+html,body{max-width:100%;overflow-x:clip}body{line-height:var(--body-leading)}
+.kicker,.folio,.source-label,.topic-label,.coverage-label{font-size:var(--text-label);line-height:1.4}
+.status,.empty,.meta-note,.summary-notice,.video-date,.program-description,.program-truth,.calendar-note,.variable-event-note p{font-size:var(--text-secondary);line-height:1.5;color:var(--readable-muted)}
+#gameThemeAction{font-size:12px!important;line-height:1.4!important}
+#refresh{font-size:12px;line-height:1.4}
+.source-label{font-size:11px;line-height:1.4}.strategy-card p,.meta-card p,.pattern-card p,.program-card p,.video-copy p{font-size:12px;line-height:1.5}
+.priority-agenda{padding:9px 10px}.priority-card{min-width:0;padding:9px;border-color:var(--card-rule);background:#fbf4e5}
+.priority-card .priority-source,.priority-card .priority-date,.priority-card details{font-size:12px;line-height:1.45}
+.priority-card .priority-source{margin-top:4px;font-weight:800;color:var(--readable-muted);white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:break-word;word-break:keep-all}
+.priority-card strong{margin:0 0 2px;font-size:14px;line-height:1.4;white-space:normal;overflow-wrap:break-word;word-break:keep-all}
+.priority-card .priority-date{color:var(--ink);font-weight:750;white-space:normal}
+.priority-card details{margin-top:5px;border-top:1px solid var(--rule)}.priority-card details>summary{display:flex;align-items:center;min-height:44px;font-weight:850;cursor:pointer}.priority-card details p{margin:3px 0 8px;white-space:normal;overflow-wrap:anywhere;word-break:keep-all}
+.source-controls button{min-height:44px}.game-tabs button{min-height:44px}.main-tabs button{min-height:44px}.routine-quick-add{min-height:44px}.routine-score-details>summary{min-height:44px}
+.filters button,#today{min-width:44px}
+#timerAlerts{width:44px;min-width:44px;height:44px}
+.open-button{min-width:44px}
+.event-actions{flex:0 0 auto}.dispatch-item .source-label{width:auto;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.game-tabs button,.main-tabs button{font-size:12px;line-height:1.25;word-break:keep-all;overflow-wrap:normal}
+.daily-routine-editor{padding:7px 8px}.daily-routine-editor p{font-size:14px;line-height:1.4}.routine-score-details>summary{font-size:12px;color:var(--readable-muted)}
+.routine-score-controls{padding:3px 0 1px}.clan-score-grid button{min-height:44px}.daily-dashboard,.operations-overview{gap:10px}.daily-dashboard .operations-card{margin-bottom:8px}
+.strategy-card,.meta-card,.video-card,.pattern-card,.program-card{border-color:var(--card-rule)}
+.dispatch-item .event-type-label{font-size:12px;line-height:1.4;color:var(--readable-muted)}
+@media(max-width:600px){.game-tabs{width:calc(100% - 12px);gap:2px}.game-tabs button{font-size:11px;padding:3px 1px}.main-tabs button{font-size:12px;padding:4px}.game-theme-strip{height:auto;min-height:58px;padding-top:7px;padding-bottom:7px}.command-strip{margin-bottom:0}.filters{margin-top:4px}.daily-dashboard .operations-head>p:not(.kicker){font-size:12px}.daily-dashboard .operations-card{padding:10px}.routine-score-details{grid-column:1/-1}}
+@media(max-width:420px){.priority-columns{display:block}.priority-list{display:flex;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:4px}.priority-card{flex:0 0 84%;width:84%;max-width:84%;min-width:0;min-height:0;scroll-snap-align:start}.priority-columns>section+section{margin-top:7px}}
+@media(max-width:340px){main{width:calc(100% - 8px);margin-left:4px;margin-right:4px}.calendar-sheet{padding-left:1px;padding-right:1px}}
+.high-confidence-badge,.high-confidence-label{background:#e8f5e9;color:#185c2b;border-color:#65a873}.unconfirmed-badge,.unconfirmed-label{background:#fff3e0;color:#7a3d00;border-color:#d99a50}.high-confidence-item{border-inline-start:4px solid #2e7d32}.expected-item{border-inline-start:4px dashed #8a6d1d}.creator-item{border-inline-start:4px solid #6a4ca0}.unconfirmed-item{border-inline-start:4px dotted #b85c00}
