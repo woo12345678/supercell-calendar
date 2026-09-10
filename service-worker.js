@@ -1,6 +1,6 @@
 'use strict';
 const CACHE_PREFIX='clash-calendar-pwa-';
-const CACHE_VERSION='v6';
+const CACHE_VERSION='v23';
 const CACHE_NAME=CACHE_PREFIX+CACHE_VERSION;
 const INVENTORY='asset-inventory.json';
 const MAX_INVENTORY_BYTES=1024*1024,MAX_ASSET_BYTES=16*1024*1024,MAX_FILES=512;

@@ -5,13 +5,13 @@
   "files": [
     {
       "path": "app.js",
-      "bytes": 87890,
-      "sha256": "1a1378b4581bf26bb153cc57b6f21e3f6123a9f28009dfd044b5e2e30cb62ef8"
+      "bytes": 91101,
+      "sha256": "6665ee0ecfa02862bad20e6eb5df675e5472de254d57bf60075114181ed84396"
     },
     {
       "path": "assets/creator-channel-registry-v1.json",
-      "bytes": 1804,
-      "sha256": "6a50ba87128a38cba8f19562f5eb636334e8667cfc3ec2f141fbef4defe14efc"
+      "bytes": 1787,
+      "sha256": "a3605ed7273f953aab6c00464dfd4796cd1c7c5a4d85e284ba5f0f86eeb6a511"
     },
     {
       "path": "assets/creator-event-evidence-v1.json",
@@ -840,8 +840,8 @@
     },
     {
       "path": "calendar-core.js",
-      "bytes": 76864,
-      "sha256": "cd8382a9b44add59c80e893a88ed967492ef786bd7335aa229a2d2a7c1de8e08"
+      "bytes": 83576,
+      "sha256": "2b8270c80a6ae16ee150a3c1dd2a7390ad428cfde88eaaf0f1ae30202f1b7581"
     },
     {
       "path": "daily-brief.css",
@@ -855,23 +855,23 @@
     },
     {
       "path": "emergency-core.js",
-      "bytes": 6240,
-      "sha256": "8a446d1fa6765e4e93520e2469bafb90f16bfd1f70033c509d96a00e200f112f"
+      "bytes": 6322,
+      "sha256": "38795c8abd93927a33c2e7cc8c6415008cbf2a38747c2f7cfc8786e55c870e11"
     },
     {
       "path": "emergency-issues.js",
-      "bytes": 2058,
-      "sha256": "0e503d1c2f7d088da3c3f5ea0a1ec957eaebcd5d49d7df545761dcb3bdd3b938"
+      "bytes": 2108,
+      "sha256": "4a038111bcb49a2bc97161a5da5ac29646d8066824c990787b3039eb264711f7"
     },
     {
       "path": "emergency.css",
-      "bytes": 2250,
-      "sha256": "6292f1550ae6ab46ca1be1c430bfe094f04a27d9456f745272c058a453f724ea"
+      "bytes": 2238,
+      "sha256": "83eb5490f2fea53bac5d06d147520f119f6d43bc1d5426f61eca95a8c366daa0"
     },
     {
       "path": "emergency.js",
-      "bytes": 5436,
-      "sha256": "65d3f7e60996be2410e05a4e5e0862fd4a69362c46b49f774c553aa20ed1b1f3"
+      "bytes": 5723,
+      "sha256": "9a0c78f745ee7af8db9cef425ba63fb1ebbff946953c76b1b458a24fbe7c5946"
     },
     {
       "path": "entity-images.css",
@@ -884,9 +884,14 @@
       "sha256": "7636c12759ad9cb0affa45551d9a40e66161855f816b33cfce991548cea6bb11"
     },
     {
+      "path": "important-event-alerts-v1.json",
+      "bytes": 1863,
+      "sha256": "d339f0d1e2dbe9a15f4466a6d55c3dceb371d519b3db49d8aceccc663eee9871"
+    },
+    {
       "path": "index.html",
-      "bytes": 29825,
-      "sha256": "fe3fc9f7d05d44a9f18559134dacfce94c5035f5f0ea0eed99e800b8443b4371"
+      "bytes": 30267,
+      "sha256": "0cf11919d96679d2f3b3ea008b43a74ee24fafdb4f7383a35c5b63c99ded15cc"
     },
     {
       "path": "instant-training-core.js",
@@ -905,8 +910,8 @@
     },
     {
       "path": "operations-core.js",
-      "bytes": 10289,
-      "sha256": "51988033dbc83da06eee1dd9104b3dd68a874e7cbd03f26fab3f9bb4d9fdc991"
+      "bytes": 10589,
+      "sha256": "e64e0a8c3f6ba005c073f3b57eb6b18a00b5704a22417846359fae89682c056b"
     },
     {
       "path": "priority-agenda.css",
@@ -914,9 +919,14 @@
       "sha256": "28f88c5f9a651cb09610d9d5fa919ceba5f562fe3bdfde9e9c5f058a0305d9b6"
     },
     {
+      "path": "provenance/important-alert-evidence-v1.json",
+      "bytes": 394,
+      "sha256": "ba21b2658b3a16bd4bcd0a95c22c94f361eef5947c73c31ae80f4930059b3ee9"
+    },
+    {
       "path": "pwa.js",
-      "bytes": 2488,
-      "sha256": "3770404ffdde7b7b50daea926dfdeb4a3cdf87a817e7907cef151ab0b0ebaea1"
+      "bytes": 2489,
+      "sha256": "db612d2e178e6f744fcebe47d4d2e203ff7d0969faa1b27c9cd11a74b9341d9c"
     },
     {
       "path": "readability.css",
@@ -935,8 +945,8 @@
     },
     {
       "path": "service-worker.js",
-      "bytes": 5072,
-      "sha256": "3c4574d43ef2adbe394e42b21e94e24af07fc6722dcab6456bb03a14788dcbd6"
+      "bytes": 5073,
+      "sha256": "702807c5e6a4bf14103ebaa09052c270cfc01f890d54f40127d0f0f87f1fd487"
     },
     {
       "path": "spend-core.js",
@@ -965,13 +975,13 @@
     },
     {
       "path": "supercell-games.css",
-      "bytes": 6407,
-      "sha256": "2d17c7efa758dfa4e0de728a19e9b6857a0c4a2495fa718918767fc4b142ffe8"
+      "bytes": 6436,
+      "sha256": "4dfb8e7e0f43724107ff98044c0feeb8b4cb361cb4b4f9f76796cc353b1f77ea"
     },
     {
       "path": "supercell-games.js",
-      "bytes": 62825,
-      "sha256": "4bf92fa88740c965a79d1f7a8e7ae5a3df92f7a0fb3eb7bb9470ed3355df701e"
+      "bytes": 67927,
+      "sha256": "77db5365e550c4989044ae90a2a9f59833e784136e392c34eb6dd7c931b69e83"
     },
     {
       "path": "user-calendar-core.js",
