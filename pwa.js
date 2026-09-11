@@ -1,5 +1,5 @@
 (function(){'use strict';
-  var EXPECTED_CACHE='clash-calendar-pwa-v23',browserProtocol=location.protocol==='http:'||location.protocol==='https:',status=document.getElementById('pwaStatus'),registration=null;
+  var EXPECTED_CACHE='clash-calendar-pwa-v31',browserProtocol=location.protocol==='http:'||location.protocol==='https:',status=document.getElementById('pwaStatus'),registration=null;
   if(!browserProtocol||!status||!('serviceWorker' in navigator))return;
   status.hidden=false;
   function show(message){status.textContent=message}
