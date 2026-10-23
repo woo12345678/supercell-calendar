@@ -5,8 +5,8 @@
   "files": [
     {
       "path": "app.js",
-      "bytes": 91101,
-      "sha256": "6665ee0ecfa02862bad20e6eb5df675e5472de254d57bf60075114181ed84396"
+      "bytes": 91645,
+      "sha256": "843b6b752b08beb48c29f26c1e6b77fd7403d4551025bd96adbe0d3210a78a82"
     },
     {
       "path": "assets/creator-channel-registry-v1.json",
@@ -840,8 +840,8 @@
     },
     {
       "path": "calendar-core.js",
-      "bytes": 86461,
-      "sha256": "f01c9feb534086d69391485a790ec2c2243b924b7a678ee4f398beba0a813d52"
+      "bytes": 88315,
+      "sha256": "3b60d3859f6ad8902800029b98094705d5d186e841c2d7ff4d6b38d895fa70bd"
     },
     {
       "path": "daily-brief.css",
@@ -860,8 +860,8 @@
     },
     {
       "path": "emergency-issues.js",
-      "bytes": 2108,
-      "sha256": "f50f3acf8806750f9f246cc0de508bcb8e89245effb03f6caab302e0304c84b6"
+      "bytes": 1177,
+      "sha256": "2b97b3b737e7352d85b80b88ca97f3531a285e354c3685f7136d5356d751036c"
     },
     {
       "path": "emergency.css",
@@ -891,7 +891,7 @@
     {
       "path": "index.html",
       "bytes": 30267,
-      "sha256": "c17b5b0647354c73e0aaf34fa81fc6cdba321cd09e50e7f24b6cb48d120673bb"
+      "sha256": "2f4eddc5cc23c3f6872f0d1da321bef3ad63dd8dca6093e5c13054772593233b"
     },
     {
       "path": "instant-training-core.js",
@@ -925,8 +925,8 @@
     },
     {
       "path": "pwa.js",
-      "bytes": 2489,
-      "sha256": "ff74a438b9bf31c84c3732d6c68d7731612a0a892c9a3999daeeed4f3f93d7d9"
+      "bytes": 2968,
+      "sha256": "d3bd21ce282f6f25d7cc778272405002619447b58bd5f458b3d2696c191e0232"
     },
     {
       "path": "readability.css",
@@ -945,8 +945,8 @@
     },
     {
       "path": "service-worker.js",
-      "bytes": 5073,
-      "sha256": "5f0ec4c6adbffedd09cf5641b3c7c1750b7832c9ab27a64ef78a84926ff90147"
+      "bytes": 6698,
+      "sha256": "ad71cdfac1fec593deb9dd281627c6c3abaa42da163be9513a07658135a949c7"
     },
     {
       "path": "spend-core.js",
@@ -980,8 +980,8 @@
     },
     {
       "path": "supercell-games.js",
-      "bytes": 71279,
-      "sha256": "81271aa613a51e3cea9de81abda1ed77afbea491016de49c4e09e2c8e3bc30ab"
+      "bytes": 73971,
+      "sha256": "a0723d617740bb5821362edc62cfaca0880f8e189252e9731720304966966e53"
     },
     {
       "path": "user-calendar-core.js",

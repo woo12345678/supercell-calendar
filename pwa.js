@@ -1,9 +1,9 @@
 (function(){'use strict';
-  var EXPECTED_CACHE='clash-calendar-pwa-v31',browserProtocol=location.protocol==='http:'||location.protocol==='https:',status=document.getElementById('pwaStatus'),registration=null;
+  var EXPECTED_CACHE='clash-calendar-pwa-v42',browserProtocol=location.protocol==='http:'||location.protocol==='https:',status=document.getElementById('pwaStatus'),registration=null;
   if(!browserProtocol||!status||!('serviceWorker' in navigator))return;
   status.hidden=false;
   function show(message){status.textContent=message}
-  async function hasVerifiedCopy(){if(!navigator.serviceWorker.controller)return false;try{return await caches.has(EXPECTED_CACHE)}catch(_cache){return false}}
+  async function hasVerifiedCopy(){var controller=navigator.serviceWorker.controller;if(!controller||typeof controller.postMessage!=='function'||typeof MessageChannel!=='function')return false;return new Promise(function(resolve){var done=false,channel=new MessageChannel(),timer=setTimeout(function(){finish(false)},3000);function finish(value){if(done)return;done=true;clearTimeout(timer);if(channel.port1.close)channel.port1.close();resolve(value===true)}channel.port1.onmessage=function(event){finish(event.data)};try{controller.postMessage({type:'VERIFY_CACHE',cache:EXPECTED_CACHE},[channel.port2])}catch(_message){finish(false)}})}
   async function evaluate(reason){
     var verified=await hasVerifiedCopy();
     if(reason==='update-failed'){show(verified?'업데이트 확인에 실패했습니다. 마지막으로 검증된 오프라인 사본을 사용합니다.':'업데이트 확인에 실패했으며 검증된 오프라인 사본을 확인하지 못했습니다.');return}
