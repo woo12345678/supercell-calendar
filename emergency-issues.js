@@ -1,7 +1,7 @@
 (function(root,factory){const value=factory();if(typeof module==='object'&&module.exports)module.exports=value;root.EmergencyIssues=value})(typeof globalThis==='object'?globalThis:this,function(){
 'use strict';
 function issue(value){return Object.freeze(value)}
-return Object.freeze({schemaVersion:2,reviewedAt:'2026-09-12T16:12:07.709Z',issues:Object.freeze([
-issue({id:'boom-pass-purchase-20260828',gameId:'boom-beach',kind:'SERVICE_ISSUE',severity:'HIGH',status:'INVESTIGATING',authority:'OFFICIAL',title:'일부 플레이어 Boom Pass 구매 불가',summary:'일부 플레이어가 Boom Pass를 구매할 수 없는 현상을 Supercell이 확인했으며 해결 작업 중입니다.',action:'반복 결제 시도를 피하고 게임 및 공식 지원에서 상태를 확인하세요. 보상 여부는 추측하지 않습니다.',sourceUrl:'https://support.supercell.com/boom-beach/en/index.html',sourceQuote:"We're aware that some players are unable to purchase the Boom Pass. Our team is working to resolve this issue as quickly as possible.",firstSeenAt:'2026-08-28T05:28:49.000Z',lastVerifiedAt:'2026-09-12T16:12:07.709Z',reviewBy:'2026-09-14T16:12:07.709Z'})
+return Object.freeze({schemaVersion:2,reviewedAt:'2026-10-24T16:00:59.389Z',issues:Object.freeze([
+issue({id:'cr-chaos-draft-suspended-20261021',gameId:'clash-royale',kind:'EVENT_CHANGE',severity:'NOTICE',status:'CONFIRMED',authority:'OFFICIAL',title:'C.H.A.O.S Draft와 Mega Draft 일시 비활성',summary:'공식 Clash Royale 채널이 문제로 인해 두 모드를 임시로 껐다고 알렸습니다. Blackout은 계속 이용할 수 있습니다.',action:'Draft와 Mega Draft 복귀 시각은 확정되지 않았습니다. 게임 내 모드 목록과 공식 채널의 후속 공지를 확인하세요.',sourceUrl:'https://x.com/ClashRoyale/status/2112908784171458753',sourceQuote:'We ran into an issue with C.H.A.O.S, and both Draft and Mega Draft modes had to be temporarily switched off.',firstSeenAt:'2026-10-21T14:08:04.000Z',lastVerifiedAt:'2026-10-24T16:00:59.389Z',reviewBy:'2026-10-31T16:00:59.389Z'})
 ])});
 });
