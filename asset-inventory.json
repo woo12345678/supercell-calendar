@@ -840,8 +840,8 @@
     },
     {
       "path": "calendar-core.js",
-      "bytes": 89779,
-      "sha256": "04a4106b23f9a296d33448ce51de4a7b59695ca0ad3102acba1feaf5bda66fd3"
+      "bytes": 90107,
+      "sha256": "6aa862f01e0cc3ffad3f05e728a09273aa936bae5101efcaf8ee68d146b1aaa8"
     },
     {
       "path": "daily-brief.css",
@@ -891,7 +891,7 @@
     {
       "path": "index.html",
       "bytes": 30267,
-      "sha256": "34e1cd38f73de948f288e312ed7f0f21a6d5fe3c15fe3ff7ae2a54863b90bd12"
+      "sha256": "8d88ed4b63bdac4614b46097293cddf26d69457c946142ac59c29eeaedadd314"
     },
     {
       "path": "instant-training-core.js",
@@ -926,7 +926,7 @@
     {
       "path": "pwa.js",
       "bytes": 2968,
-      "sha256": "98395a96702dc3a63f39203c206721659eadda14c4b7959ca5a1af9a2543c80b"
+      "sha256": "d1526a66619e7fa5480bd233629aec1bf3fbcaa7e82d51b2cbd772e03bd1131e"
     },
     {
       "path": "readability.css",
@@ -946,7 +946,7 @@
     {
       "path": "service-worker.js",
       "bytes": 6698,
-      "sha256": "01c99cd7019e4b86ffb8bb481d0ee00bc35f91e55f14aafeec74b4d9c105fad6"
+      "sha256": "dd93f103e7425a12ce5bb2eeaed9122663864bdd05b4fed50e9f004bb830bb05"
     },
     {
       "path": "spend-core.js",
@@ -980,8 +980,8 @@
     },
     {
       "path": "supercell-games.js",
-      "bytes": 78593,
-      "sha256": "16d265aa933127eb74accf957793d200c40bab935067833c5eaf410bbda545d4"
+      "bytes": 80587,
+      "sha256": "0fef69f26ed15baad067e4358e1acf8b5ee2428a090685469f1f6272487ef9c1"
     },
     {
       "path": "user-calendar-core.js",
