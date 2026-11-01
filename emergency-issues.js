@@ -1,7 +1,8 @@
 (function(root,factory){const value=factory();if(typeof module==='object'&&module.exports)module.exports=value;root.EmergencyIssues=value})(typeof globalThis==='object'?globalThis:this,function(){
 'use strict';
 function issue(value){return Object.freeze(value)}
-return Object.freeze({schemaVersion:2,reviewedAt:'2026-10-24T16:00:59.389Z',issues:Object.freeze([
+return Object.freeze({schemaVersion:2,reviewedAt:'2026-10-30T16:00:38.360Z',issues:Object.freeze([
+issue({id:'boom-pc-windows-launch-20261028',gameId:'boom-beach',kind:'SERVICE_ISSUE',severity:'HIGH',status:'INVESTIGATING',authority:'OFFICIAL',title:'일부 PC 플레이어 게임 실행 불가',summary:'최근 Windows 보안 업데이트와의 충돌로 일부 PC 플레이어가 게임을 실행할 수 없다고 공식 Support가 알렸습니다.',action:'수정은 다음 업데이트에 포함될 예정입니다. PC에서는 업데이트와 공식 Support 알림을 확인하고, 모바일 플레이가 가능하면 임시로 이용하세요.',sourceUrl:'https://support.supercell.com/en/alerts.json',sourceQuote:'We’re aware some PC players are unable to launch the game due to a conflict with a recent Windows security update. A fix is in progress and will be included in our next update.',firstSeenAt:'2026-10-28T11:10:00.000Z',lastVerifiedAt:'2026-10-30T16:00:38.360Z',reviewBy:'2026-11-01T16:00:38.360Z'}),
 issue({id:'cr-chaos-draft-suspended-20261021',gameId:'clash-royale',kind:'EVENT_CHANGE',severity:'NOTICE',status:'CONFIRMED',authority:'OFFICIAL',title:'C.H.A.O.S Draft와 Mega Draft 일시 비활성',summary:'공식 Clash Royale 채널이 문제로 인해 두 모드를 임시로 껐다고 알렸습니다. Blackout은 계속 이용할 수 있습니다.',action:'최신 공식 지속 확인이 없어 현재 상태에서 제외했습니다. 게임 내 모드 목록과 공식 채널의 후속 공지를 확인하세요.',sourceUrl:'https://x.com/ClashRoyale/status/2112908784171458753',sourceQuote:'We ran into an issue with C.H.A.O.S, and both Draft and Mega Draft modes had to be temporarily switched off.',firstSeenAt:'2026-10-21T14:08:04.000Z',lastVerifiedAt:'2026-10-24T16:00:59.389Z',reviewBy:'2026-10-27T18:00:42.569Z'})
 ])});
 });
