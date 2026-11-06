@@ -860,8 +860,8 @@
     },
     {
       "path": "emergency-issues.js",
-      "bytes": 2118,
-      "sha256": "3257c38744dd89bebc33a3e100e9853ed984a6ba19324f593b904c04c6280926"
+      "bytes": 1292,
+      "sha256": "49741b634d926f7e43872dab541ec51e7ccbc967af8faaac8371792a05aaffda"
     },
     {
       "path": "emergency.css",
@@ -891,7 +891,7 @@
     {
       "path": "index.html",
       "bytes": 30269,
-      "sha256": "5a3a96074ffaea37600b53b3c87355ac291e456f52d9f0ed7d6082591b561461"
+      "sha256": "9548a762b2967f39de9e08612993f8571b32df5341c5ef07573a3774e6e733c6"
     },
     {
       "path": "instant-training-core.js",
@@ -926,7 +926,7 @@
     {
       "path": "pwa.js",
       "bytes": 2968,
-      "sha256": "5fdba79319462a51a1bcef75d444e59a62ff7ba5f2ea365982dd0ab2fddffd98"
+      "sha256": "2d9aef07d2fdac5b89873396ef2b8fe4ddb69326b455c287ec64f49930e6932c"
     },
     {
       "path": "readability.css",
@@ -946,7 +946,7 @@
     {
       "path": "service-worker.js",
       "bytes": 6698,
-      "sha256": "9a7884ed592502e891faf20b283c3dc7cc34fcc8b5254c5ed793b7a3cde17c55"
+      "sha256": "717fbefe191ffa003afb51892cfb3d5c2bffab57a64232f05076ac8195a19aae"
     },
     {
       "path": "spend-core.js",
