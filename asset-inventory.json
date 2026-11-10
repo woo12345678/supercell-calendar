@@ -840,8 +840,8 @@
     },
     {
       "path": "calendar-core.js",
-      "bytes": 93793,
-      "sha256": "290c538d5a048d08b9f89a21b30516b43ec54d0505c61f5070374aa73838880a"
+      "bytes": 94424,
+      "sha256": "04f5916d97610251124e8bfee7d1e7e867d33ef690b6eb5002b83421e0b3fdbb"
     },
     {
       "path": "daily-brief.css",
@@ -855,13 +855,13 @@
     },
     {
       "path": "emergency-core.js",
-      "bytes": 6479,
-      "sha256": "7ff9c863b5dc138cb88ff2a3b9b9febef99882cbd50a8b803137cdddcefbca24"
+      "bytes": 6534,
+      "sha256": "5d48b6546e9d528cc0a645cf20fb4b22700aebaf15d6e8151dd05bd7027265f4"
     },
     {
       "path": "emergency-issues.js",
-      "bytes": 2129,
-      "sha256": "dcd1db0af47f6dcd701a49b8d6bb9204b0deb13185557e076e2275c9d5558faf"
+      "bytes": 2385,
+      "sha256": "662b8eea76b5f3d4fa9ece0452fdc9ef21a0e39ada2157b1ef9802e46a8a7ec0"
     },
     {
       "path": "emergency.css",
@@ -870,8 +870,8 @@
     },
     {
       "path": "emergency.js",
-      "bytes": 5981,
-      "sha256": "03c2c5fbd43f04ce4ccb892ce2b53d3ffae5fd010555493756cc1d7808c849a6"
+      "bytes": 6089,
+      "sha256": "51fc2818946a06a94575f92bf494926345569f80e16e5be07c899f0469505f55"
     },
     {
       "path": "entity-images.css",
@@ -891,7 +891,7 @@
     {
       "path": "index.html",
       "bytes": 30269,
-      "sha256": "daaf4bbc0afd6f0d79f820e77126aa8a517a96aeed0203948b2f93d7ae3361c8"
+      "sha256": "5b8bbb87ab4736d2a1c55ceaee0533870e99ccafa30327f505ba00c25ab0afda"
     },
     {
       "path": "instant-training-core.js",
@@ -926,7 +926,7 @@
     {
       "path": "pwa.js",
       "bytes": 2968,
-      "sha256": "5ef96379366f985ced7fe13e54e31976aefaa3fcca61913c4a64278f29a6c2fe"
+      "sha256": "6d3656714f619233c1615f7fca634a741a6bdf20512c636e4dd8e022a93807e5"
     },
     {
       "path": "readability.css",
@@ -946,7 +946,7 @@
     {
       "path": "service-worker.js",
       "bytes": 6698,
-      "sha256": "5c134988a7202962cb92e63793456feb64886f7f73aa391de467139036457a85"
+      "sha256": "7b2df93aa36ccd99cc8596ad43e0565681ed55f4f919829b66bf508c587e3a1b"
     },
     {
       "path": "spend-core.js",
@@ -980,8 +980,8 @@
     },
     {
       "path": "supercell-games.js",
-      "bytes": 102045,
-      "sha256": "a317adb3fc964e5d6fc4ce51bc2b1025748b0957650f8f3470bd712140141367"
+      "bytes": 103152,
+      "sha256": "2841a078bb3b5a4777c315d9a29a1971cc64c0a675b5bc86515585410ae2ddcf"
     },
     {
       "path": "user-calendar-core.js",
