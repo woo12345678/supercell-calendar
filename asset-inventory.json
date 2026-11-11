@@ -860,8 +860,8 @@
     },
     {
       "path": "emergency-issues.js",
-      "bytes": 2385,
-      "sha256": "662b8eea76b5f3d4fa9ece0452fdc9ef21a0e39ada2157b1ef9802e46a8a7ec0"
+      "bytes": 1292,
+      "sha256": "00bf0e296eedc31a92c31fe4ce67d71c98389e89c4c89bfaa457fb0d78620551"
     },
     {
       "path": "emergency.css",
@@ -891,7 +891,7 @@
     {
       "path": "index.html",
       "bytes": 30269,
-      "sha256": "54e19234a15421553d55875aee1883e4be32233fcba06a5cf0d93ef013d39b16"
+      "sha256": "c56fd3d1207485de10ba7bcacbf2f266b7e8ea2afddff90aeb4d79796f78d8ac"
     },
     {
       "path": "instant-training-core.js",
@@ -925,8 +925,8 @@
     },
     {
       "path": "pwa.js",
-      "bytes": 2968,
-      "sha256": "32a4519a7ae94ce53004fceb64f25794299506b435a6489bf5e7ef6c971c9936"
+      "bytes": 2969,
+      "sha256": "32a7680705c9f50a8df5c6a29f4b4e339e06d3ae6b6cf36ee95f4efca36f9249"
     },
     {
       "path": "readability.css",
@@ -945,8 +945,8 @@
     },
     {
       "path": "service-worker.js",
-      "bytes": 6698,
-      "sha256": "366b4552a3d11dfb47de13bf8ede266e8b249c885c62ef0bf9b65d65d41f0e3e"
+      "bytes": 6699,
+      "sha256": "b07d7c04ef14d9ab066b4e98e8868dbdc8188770700a6ea4398daa4657e814ab"
     },
     {
       "path": "spend-core.js",
@@ -980,8 +980,8 @@
     },
     {
       "path": "supercell-games.js",
-      "bytes": 104859,
-      "sha256": "adeeb83dd41e222263498be0ac9ba8296148434ed6d3fd0b82b7710564733d0b"
+      "bytes": 106399,
+      "sha256": "828bedf63fd69671f8a0d864fd3b3b98bab6585d1b489c17329b57943683522c"
     },
     {
       "path": "user-calendar-core.js",
