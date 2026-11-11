@@ -5,8 +5,8 @@
   "files": [
     {
       "path": "app.js",
-      "bytes": 91645,
-      "sha256": "843b6b752b08beb48c29f26c1e6b77fd7403d4551025bd96adbe0d3210a78a82"
+      "bytes": 91833,
+      "sha256": "4542e48b487c56fa24b735c46edc6b036349d0e03bfc4f6d4fcd1bb85e20428a"
     },
     {
       "path": "assets/creator-channel-registry-v1.json",
@@ -840,8 +840,8 @@
     },
     {
       "path": "calendar-core.js",
-      "bytes": 94442,
-      "sha256": "61375e9b91a26258b631629cfbfdeab86ecff0a16e32469663f4292694763c33"
+      "bytes": 94510,
+      "sha256": "3be610114e4805c31c98b23d94a1c08259b05a70c32e7c6675fc1f5e34495d3d"
     },
     {
       "path": "daily-brief.css",
@@ -890,8 +890,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 30269,
-      "sha256": "c56fd3d1207485de10ba7bcacbf2f266b7e8ea2afddff90aeb4d79796f78d8ac"
+      "bytes": 30295,
+      "sha256": "903d91ca99092caee967e42f5c64eb40c4cf628a53c48423edd2d117b12122b4"
     },
     {
       "path": "instant-training-core.js",
@@ -926,7 +926,7 @@
     {
       "path": "pwa.js",
       "bytes": 2969,
-      "sha256": "32a7680705c9f50a8df5c6a29f4b4e339e06d3ae6b6cf36ee95f4efca36f9249"
+      "sha256": "f897ace2c0572694d4033d9990c4cf4c036afaaa6653a7dfd7711e9a8f5196a0"
     },
     {
       "path": "readability.css",
@@ -945,8 +945,8 @@
     },
     {
       "path": "service-worker.js",
-      "bytes": 6699,
-      "sha256": "b07d7c04ef14d9ab066b4e98e8868dbdc8188770700a6ea4398daa4657e814ab"
+      "bytes": 6754,
+      "sha256": "d1bae5f8097eb4c0533ff37eb2cc76a3ef9eb377e5f97e31d516416abe2f0849"
     },
     {
       "path": "spend-core.js",

@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="assets/pwa/apple-touch-icon-180.png">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://i.ytimg.com/vi/ https://clashofclans-layouts.com; manifest-src 'self'; worker-src 'self'; connect-src 'self'; font-src 'none'; object-src 'none'; frame-src 'none'; media-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>슈퍼셀 달력 v2.1.118</title>
+  <title>슈퍼셀 달력 v2.1.119</title>
   <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="priority-agenda.css">
   <link rel="stylesheet" href="daily-brief.css">
   <link rel="stylesheet" href="daily-dashboard.css">
@@ -22,9 +22,9 @@
 </head>
 <body>
   <p id="pwaStatus" class="pwa-status" role="status" aria-live="polite" hidden></p>
-  <a class="skip" href="#calendar">달력으로 건너뛰기</a>
+  <a class="skip" href="#gameWorkspace">주요 화면으로 건너뛰기</a>
   <header class="clan-banner">
-    <div class="brand-copy"><p>한눈에 보는 게임 일정 · v2.1.118</p><h1>슈퍼셀 달력</h1></div>
+    <div class="brand-copy"><p>한눈에 보는 게임 일정 · v2.1.119</p><h1>슈퍼셀 달력</h1></div>
     <div class="header-actions">
       <button id="refresh" class="text-button" aria-label="클래시 오브 클랜 공식 소식과 크리에이터 영상 새로고침">CoC 새 소식</button>
       <button id="alerts" class="alert-button" aria-pressed="false" disabled aria-label="공식 소식과 중요 일정 알림은 Android 앱에서만 설정할 수 있습니다"><span>공식 소식·중요 일정 알림 · Android 전용</span></button>
@@ -33,7 +33,7 @@
   </header>
 
   <nav id="gameTabs" class="game-tabs" role="tablist" aria-label="게임 선택"><button id="gameTab-clash-of-clans" role="tab" aria-selected="true" data-game="clash-of-clans" aria-controls="gameWorkspace" aria-label="클래시 오브 클랜">클오클</button><button id="gameTab-brawl-stars" role="tab" aria-selected="false" tabindex="-1" data-game="brawl-stars" aria-controls="gameWorkspace">브롤스타즈</button><button id="gameTab-boom-beach" role="tab" aria-selected="false" tabindex="-1" data-game="boom-beach" aria-controls="gameWorkspace">붐비치</button><button id="gameTab-clash-royale" role="tab" aria-selected="false" tabindex="-1" data-game="clash-royale" aria-controls="gameWorkspace">클래시 로얄</button><button id="gameTab-hay-day" role="tab" aria-selected="false" tabindex="-1" data-game="hay-day" aria-controls="gameWorkspace">헤이데이</button></nav>
-  <div id="gameWorkspace" role="tabpanel" aria-labelledby="gameTab-clash-of-clans">
+  <div id="gameWorkspace" tabindex="-1" role="tabpanel" aria-labelledby="gameTab-clash-of-clans">
   <nav class="main-tabs" role="tablist" aria-label="주요 화면"><button id="calendarTab" role="tab" aria-selected="true" aria-controls="calendarPanel">달력</button><button id="emergencyTab" role="tab" aria-selected="false" aria-controls="emergencyPanel" tabindex="-1">긴급 <span id="emergencyCount" class="emergency-count" aria-label="현재 긴급 건수" hidden></span></button><button id="strategyTab" role="tab" aria-selected="false" aria-controls="strategyPanel" tabindex="-1">게임 팁</button><button id="creatorsTab" role="tab" aria-selected="false" aria-controls="creatorsPanel" tabindex="-1">영상</button><button id="todayTab" role="tab" aria-selected="false" aria-controls="todayPanel" tabindex="-1">오늘</button><button id="spendTab" role="tab" aria-selected="false" aria-controls="spendPanel" tabindex="-1">현질 기록</button><button id="revenueTab" role="tab" aria-selected="false" aria-controls="revenuePanel" tabindex="-1">매출</button></nav>
   <main id="calendarPanel" role="tabpanel" aria-labelledby="calendarTab">
     <section id="gameThemeStrip" class="game-theme-strip" aria-labelledby="gameThemeName"><img id="gameHeroArt" class="game-hero-art" src="assets/game-themes/clash-of-clans.webp" alt="" aria-hidden="true"><div class="game-theme-copy"><p class="kicker">이번 달 전장</p><h2 id="gameThemeName">클래시 오브 클랜</h2><p id="gameThemeAction">마을의 다음 작전을 달력에서 먼저 확인하세요.</p></div><button id="launchSelectedGame" class="selected-game-launch" disabled title="브라우저 미리보기에서는 게임을 열 수 없습니다." aria-label="브라우저 미리보기에서는 게임을 열 수 없습니다.">클래시 오브 클랜 열기</button></section>

@@ -372,15 +372,15 @@
     Object.keys(value).forEach(function(key){copy[key]=cloneBriefValue(value[key],memo);});return copy;
   }
   function buildDailyBrief(events,programs,guides,now){
-    var empty={ongoing:[],highConfidenceTodayCount:0,expectedTodayCount:0,nextOfficial:null,inGameChecks:[],playerNotes:[]};if(!evaluation(now))return empty;var dated=Array.isArray(events)?events:[];
+    var empty={ongoing:[],ongoingTotal:0,highConfidenceTodayCount:0,expectedTodayCount:0,nextOfficial:null,inGameChecks:[],playerNotes:[]};if(!evaluation(now))return empty;var dated=Array.isArray(events)?events:[];
     function range(e){return e&&validDate(e.startDate)&&validDate(e.endDate)&&e.startDate<=e.endDate;}function admitted(e,truth){return range(e)&&classifyCalendarEvent(e)===truth;}
-    var ongoing=dated.filter(function(e){return admitted(e,'OFFICIAL')&&isActionableCalendarEventAt(e,now);}).sort(function(a,b){return a.endDate.localeCompare(b.endDate)||a.startDate.localeCompare(b.startDate)||authorityRank(a)-authorityRank(b)||String(a.id||'').localeCompare(String(b.id||''));}).slice(0,4).map(function(e){return cloneBriefValue(e);});
+    var allOngoing=dated.filter(function(e){return admitted(e,'OFFICIAL')&&isActionableCalendarEventAt(e,now);}).sort(function(a,b){return a.endDate.localeCompare(b.endDate)||a.startDate.localeCompare(b.startDate)||authorityRank(a)-authorityRank(b)||String(a.id||'').localeCompare(String(b.id||''));}),ongoing=allOngoing.slice(0,4).map(function(e){return cloneBriefValue(e);});
     var highConfidenceTodayCount=dated.filter(function(e){return admitted(e,'HIGH_CONFIDENCE')&&isActionableCalendarEventAt(e,now);}).length;
     var expectedTodayCount=dated.filter(function(e){return admitted(e,'EXPECTED')&&isActionableCalendarEventAt(e,now);}).length;
     var future=dated.filter(function(e){return admitted(e,'OFFICIAL')&&actionablePhase(e,now)==='upcoming';}).sort(function(a,b){return a.startDate.localeCompare(b.startDate)||a.endDate.localeCompare(b.endDate)||String(a.id||'').localeCompare(String(b.id||''));});
     var checks=(Array.isArray(programs)?programs:[]).filter(function(p){return p&&p.official===true&&p.status==='OFFICIAL_UNDATED'&&!('startDate' in p)&&!('endDate' in p);}).sort(function(a,b){return String(b.asOf||'').localeCompare(String(a.asOf||''))||String(a.id||'').localeCompare(String(b.id||''));}).slice(0,3).map(function(p){return cloneBriefValue(p);});
     var notes=(Array.isArray(guides)?guides:[]).filter(function(g){return g&&typeof g.title==='string'&&g.title.trim()&&typeof g.summary==='string'&&g.summary.trim()&&g.official!==true;}).slice(0,2).map(function(g){return cloneBriefValue(g);});
-    return{ongoing:ongoing,highConfidenceTodayCount:highConfidenceTodayCount,expectedTodayCount:expectedTodayCount,nextOfficial:future.length?cloneBriefValue(future[0]):null,inGameChecks:checks,playerNotes:notes};
+    return{ongoing:ongoing,ongoingTotal:allOngoing.length,highConfidenceTodayCount:highConfidenceTodayCount,expectedTodayCount:expectedTodayCount,nextOfficial:future.length?cloneBriefValue(future[0]):null,inGameChecks:checks,playerNotes:notes};
   }
   function isTodayCalendarEvent(e,now){return now===undefined?['OFFICIAL','HIGH_CONFIDENCE','EXPECTED','CREATOR_DATED'].includes(classifyCalendarEvent(e)):isActionableCalendarEventAt(e,now);}
   function eventMeta(category){return EVENT_META[category]||{label:'일정',symbol:'•'};}

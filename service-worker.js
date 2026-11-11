@@ -1,6 +1,6 @@
 'use strict';
 const CACHE_PREFIX='clash-calendar-pwa-';
-const CACHE_VERSION='v101';
+const CACHE_VERSION='v102';
 const CACHE_NAME=CACHE_PREFIX+CACHE_VERSION;
 const INVENTORY='asset-inventory.json';
 const MAX_INVENTORY_BYTES=1024*1024,MAX_ASSET_BYTES=16*1024*1024,MAX_FILES=512;
@@ -27,11 +27,11 @@ async function verifyCache(){
 }
 async function installShell(){
  const completionUrl=new URL(INVENTORY,self.registration.scope);
+ try{await verifyCache();return}catch(_existingInvalid){}
  try{
-  await caches.delete(CACHE_NAME);
   const inventoryResponse=await fetch(completionUrl,{cache:'no-store',redirect:'error'}),entries=await inventoryEntries(inventoryResponse);
   const verified=[];for(const path of shellPaths){const expected=entries.get(path),response=await fetch(new URL(path,self.registration.scope),{cache:'no-store',redirect:'error'});verifiedResponse(response,path);const data=await bytes(response.clone(),MAX_ASSET_BYTES);if(data.byteLength!==expected.bytes||await sha256(data)!==expected.sha256)throw new Error('asset mismatch');verified.push([new URL(path,self.registration.scope),response])}
-  const cache=await caches.open(CACHE_NAME);for(const [url,response] of verified)await cache.put(url,response);await cache.put(completionUrl,inventoryResponse)
+  await caches.delete(CACHE_NAME);const cache=await caches.open(CACHE_NAME);for(const [url,response] of verified)await cache.put(url,response);await cache.put(completionUrl,inventoryResponse)
  }catch(error){await caches.delete(CACHE_NAME);throw error}
 }
 self.addEventListener('install',event=>event.waitUntil(installShell()));
