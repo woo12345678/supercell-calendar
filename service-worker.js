@@ -1,13 +1,13 @@
 'use strict';
 const CACHE_PREFIX='clash-calendar-pwa-';
-const CACHE_VERSION='v114';
+const CACHE_VERSION='v118';
 const CACHE_NAME=CACHE_PREFIX+CACHE_VERSION;
 const INVENTORY='asset-inventory.json';
 const MAX_INVENTORY_BYTES=1024*1024,MAX_ASSET_BYTES=16*1024*1024,MAX_FILES=512;
 const APP_SHELL=Object.freeze(['./','index.html','styles.css','priority-agenda.css','daily-brief.css','daily-dashboard.css','supercell-games.css','entity-images.css','readability.css','revenue.css','spend.css','instant-training.css','user-calendar.css','emergency.css','calendar-core.js','user-calendar-core.js','user-calendar.js','operations-core.js','instant-training-core.js','spend-core.js','emergency-core.js','emergency-issues.js','emergency.js','strategy-data.js','game-meta-data.js','supercell-games.js','app.js','revenue.js','spend.js','pwa.js','manifest.webmanifest','assets/pwa/calendar-icon-192.png','assets/pwa/calendar-icon-512.png','assets/pwa/apple-touch-icon-180.png','assets/pwa/provenance.json','assets/purchase-catalog-v1.js']);
 const scopePath=new URL(self.registration.scope).pathname;
 const shellPaths=Object.freeze([...new Set(APP_SHELL.map(path=>path==='./'?'index.html':path))]);
-const allowed=new Set(shellPaths.map(path=>new URL(path,self.registration.scope).pathname));
+
 function exactKeys(value,keys){return value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).sort().join('|')===keys.slice().sort().join('|')}
 function safePath(path){return typeof path==='string'&&path.length>0&&path.length<=256&&!path.startsWith('/')&&!path.includes('\\')&&!path.split('/').some(part=>part===''||part==='.'||part==='..')&&new URL(path,self.registration.scope).origin===self.location.origin}
 async function bytes(response,limit){const data=await response.arrayBuffer();if(data.byteLength>limit)throw new Error('response too large');return data}
@@ -22,7 +22,7 @@ async function inventoryEntries(response){
 }
 async function verifyCache(){
  const cache=await caches.open(CACHE_NAME),inventoryResponse=await cache.match(new URL(INVENTORY,self.registration.scope));if(!inventoryResponse)throw new Error('verified shell unavailable');const entries=await inventoryEntries(inventoryResponse);
- for(const path of shellPaths){const expected=entries.get(path),cached=await cache.match(new URL(path,self.registration.scope));if(!cached)throw new Error('verified shell unavailable');verifiedResponse(cached,path);const data=await bytes(cached.clone(),MAX_ASSET_BYTES);if(data.byteLength!==expected.bytes||await sha256(data)!==expected.sha256)throw new Error('asset mismatch')}
+ for(const [path,expected] of entries){const cached=await cache.match(new URL(path,self.registration.scope));if(!cached)throw new Error('verified shell unavailable');verifiedResponse(cached,path);const data=await bytes(cached.clone(),MAX_ASSET_BYTES);if(data.byteLength!==expected.bytes||await sha256(data)!==expected.sha256)throw new Error('asset mismatch')}
  return true
 }
 async function installShell(){
@@ -30,7 +30,7 @@ async function installShell(){
  try{await verifyCache();return}catch(_existingInvalid){}
  try{
   const inventoryResponse=await fetch(completionUrl,{cache:'no-store',redirect:'error'}),entries=await inventoryEntries(inventoryResponse);
-  const verified=[];for(const path of shellPaths){const expected=entries.get(path),response=await fetch(new URL(path,self.registration.scope),{cache:'no-store',redirect:'error'});verifiedResponse(response,path);const data=await bytes(response.clone(),MAX_ASSET_BYTES);if(data.byteLength!==expected.bytes||await sha256(data)!==expected.sha256)throw new Error('asset mismatch');verified.push([new URL(path,self.registration.scope),response])}
+  const verified=[];for(const [path,expected] of entries){const response=await fetch(new URL(path,self.registration.scope),{cache:'no-store',redirect:'error'});verifiedResponse(response,path);const data=await bytes(response.clone(),MAX_ASSET_BYTES);if(data.byteLength!==expected.bytes||await sha256(data)!==expected.sha256)throw new Error('asset mismatch');verified.push([new URL(path,self.registration.scope),response])}
   await caches.delete(CACHE_NAME);const cache=await caches.open(CACHE_NAME);for(const [url,response] of verified)await cache.put(url,response);await cache.put(completionUrl,inventoryResponse)
  }catch(error){await caches.delete(CACHE_NAME);throw error}
 }
@@ -38,7 +38,6 @@ self.addEventListener('install',event=>event.waitUntil(installShell()));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith(CACHE_PREFIX)&&key!==CACHE_NAME).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('message',event=>{if(!event.data||event.data.type!=='VERIFY_CACHE'||event.data.cache!==CACHE_NAME||!event.ports||event.ports.length!==1)return;event.waitUntil(verifyCache().then(()=>event.ports[0].postMessage(true),()=>event.ports[0].postMessage(false)))});
 self.addEventListener('fetch',event=>{
-  const request=event.request,url=new URL(request.url);if(request.method!=='GET'||url.origin!==self.location.origin||!url.pathname.startsWith(scopePath))return;
-  const navigation=request.mode==='navigate',shell=allowed.has(url.pathname);if(!navigation&&!shell)return;
-  event.respondWith((async()=>{const cache=await caches.open(CACHE_NAME),inventoryResponse=await cache.match(new URL(INVENTORY,self.registration.scope));if(!inventoryResponse)throw new Error('verified shell unavailable');const entries=await inventoryEntries(inventoryResponse),path=navigation?'index.html':shellPaths.find(item=>new URL(item,self.registration.scope).pathname===url.pathname);if(!path)throw new Error('verified shell unavailable');const expected=entries.get(path),cached=await cache.match(new URL(path,self.registration.scope));if(!cached)throw new Error('verified shell unavailable');verifiedResponse(cached,path);const data=await bytes(cached.clone(),MAX_ASSET_BYTES);if(data.byteLength!==expected.bytes||await sha256(data)!==expected.sha256)throw new Error('asset mismatch');return cached})());
+  const request=event.request,url=new URL(request.url),navigation=request.mode==='navigate';if(request.method!=='GET'||url.origin!==self.location.origin||!url.pathname.startsWith(scopePath)||(!navigation&&url.search)||url.hash)return;
+  event.respondWith((async()=>{const cache=await caches.open(CACHE_NAME),inventoryResponse=await cache.match(new URL(INVENTORY,self.registration.scope));if(!inventoryResponse)throw new Error('verified shell unavailable');const entries=await inventoryEntries(inventoryResponse),relative=decodeURIComponent(url.pathname.slice(scopePath.length)),path=navigation?'index.html':relative;if(!safePath(path)||!entries.has(path))throw new Error('verified asset unavailable');const expected=entries.get(path),cached=await cache.match(new URL(path,self.registration.scope));if(!cached)throw new Error('verified shell unavailable');verifiedResponse(cached,path);const data=await bytes(cached.clone(),MAX_ASSET_BYTES);if(data.byteLength!==expected.bytes||await sha256(data)!==expected.sha256)throw new Error('asset mismatch');return cached})());
 });
