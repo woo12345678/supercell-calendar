@@ -5,8 +5,8 @@
   "files": [
     {
       "path": "app.js",
-      "bytes": 91826,
-      "sha256": "90c607ca4a1d1325dff1cb5fef01b9d5d6d61350d119fca6ac1e2383bd1ac401"
+      "bytes": 94044,
+      "sha256": "69c146d649ea890bb20756a28de7940f8c40c87510062918718f1a532449db58"
     },
     {
       "path": "assets/creator-channel-registry-v1.json",
@@ -891,7 +891,7 @@
     {
       "path": "index.html",
       "bytes": 30295,
-      "sha256": "8c49c877ab062e9ad51b2bc76b97f8a4841e5d8d69f6020b65dcd2a255d8d2b5"
+      "sha256": "20c152a08c560c43f092ba88714081362a1c968be7a404c15b61909379b2d0f9"
     },
     {
       "path": "instant-training-core.js",
@@ -926,7 +926,7 @@
     {
       "path": "pwa.js",
       "bytes": 2969,
-      "sha256": "63600a2833d25d4dc363a66671808037b2d071aedc3bfc488297e6b98f87fc16"
+      "sha256": "20a589eb182c2a7691b1c2bd4b1491f972623a8ad5122f412605059968709f3d"
     },
     {
       "path": "readability.css",
@@ -946,7 +946,7 @@
     {
       "path": "service-worker.js",
       "bytes": 6610,
-      "sha256": "aa100b9bec6564b697fb4da79638ebf2d70bd7d9e513e67df680d1ac10754964"
+      "sha256": "cfa0c49eb7479d6a93574559e5e99cc249f94019b2a53688d887019e5072a4db"
     },
     {
       "path": "spend-core.js",
@@ -980,8 +980,8 @@
     },
     {
       "path": "supercell-games.js",
-      "bytes": 120351,
-      "sha256": "17f09265f35db3f27f0759940fa23873a81302178786f28ab55d1a108c7600b1"
+      "bytes": 121086,
+      "sha256": "0992566bab51386a03fb20aa1e891850ef8ff6cec4fe538b5570aaa62cc6f5a7"
     },
     {
       "path": "user-calendar-core.js",
