@@ -891,7 +891,7 @@
     {
       "path": "index.html",
       "bytes": 30295,
-      "sha256": "4dedf45c9fb3b0fd05c48cbc79ba15c6f779421ea4991c7fffdbadd4efb9fa43"
+      "sha256": "c07540b51dd3b2c122715d607f14bf84cb7d73d0cc2968951267155573e2b013"
     },
     {
       "path": "instant-training-core.js",
@@ -926,7 +926,7 @@
     {
       "path": "pwa.js",
       "bytes": 2969,
-      "sha256": "80c4764466a87f1c08439b49caf8caa0bb6944a74375799adab0efb6629e4de9"
+      "sha256": "2c31232a1d67bab6c3c1c0f5ef6016f2777358a6164de2f6bc1a0d275990bb35"
     },
     {
       "path": "readability.css",
@@ -946,7 +946,7 @@
     {
       "path": "service-worker.js",
       "bytes": 6610,
-      "sha256": "af656a77077895ecda653e1979c5cdc62250b6eafc685ab7b7f7feb2a5472cc1"
+      "sha256": "edccea90c27561391737f8340c1bc924827904b2e94017fb98a4764a863cafd6"
     },
     {
       "path": "spend-core.js",
